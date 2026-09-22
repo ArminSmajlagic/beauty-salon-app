@@ -1,7 +1,7 @@
 // src/components/layout/header.tsx
 
 import Navbar from "./Navigation";
-import styles from "./header.module.css";
+import styles from "./Header.module.css";
 
 function MailIcon() {
     return (
