@@ -1,0 +1,367 @@
+.footer {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 80px;
+
+    color: rgba(255, 255, 255, 0.86);
+
+    background:
+            linear-gradient(
+                    135deg,
+                    rgba(76, 48, 67, 0.94),
+                    rgba(112, 78, 99, 0.9)
+            );
+
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+
+    box-shadow:
+            0 -20px 60px rgba(60, 38, 49, 0.12),
+            inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(30px) saturate(140%);
+    -webkit-backdrop-filter: blur(30px) saturate(140%);
+}
+
+.footerInner {
+    width: min(100% - 48px, var(--header-max-width));
+
+    margin: 0 auto;
+    padding: 72px 0 64px;
+
+    display: grid;
+    grid-template-columns:
+        minmax(220px, 1.35fr)
+        repeat(4, minmax(130px, 1fr))
+        minmax(220px, 1.2fr);
+
+    gap: 44px;
+}
+
+.brandColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo {
+    display: inline-flex;
+    flex-direction: column;
+
+    color: #ffffff;
+
+    text-decoration: none;
+}
+
+.logoMain {
+    font-family:
+            Georgia,
+            "Times New Roman",
+            serif;
+
+    font-size: 30px;
+    line-height: 1;
+
+    letter-spacing: -0.025em;
+}
+
+.logoSub {
+    margin-top: 8px;
+
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.32em;
+
+    opacity: 0.68;
+}
+
+.brandDescription {
+    max-width: 230px;
+
+    margin: 24px 0 0;
+
+    color: rgba(255, 255, 255, 0.62);
+
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.socialLinks {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 28px;
+}
+
+.socialLink {
+    width: 38px;
+    height: 38px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    transition:
+            color 180ms ease,
+            background 180ms ease,
+            border-color 180ms ease,
+            transform 180ms ease;
+}
+
+.socialLink:hover {
+    color: #ffffff;
+
+    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.12);
+
+    transform: translateY(-2px);
+}
+
+.socialLink svg {
+    width: 17px;
+    height: 17px;
+}
+
+.navigation {
+    display: contents;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.categoryTitle {
+    display: inline-block;
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+
+    letter-spacing: 0.015em;
+    text-decoration: none;
+}
+
+.categoryItems {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    margin: 18px 0 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.categoryItem {
+    display: inline-block;
+
+    color: rgba(255, 255, 255, 0.56);
+
+    font-size: 12px;
+    line-height: 1.5;
+
+    text-decoration: none;
+
+    transition:
+            color 180ms ease,
+            transform 180ms ease;
+}
+
+.categoryItem:hover {
+    color: rgba(255, 255, 255, 0.94);
+
+    transform: translateX(3px);
+}
+
+.contactColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contactList {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+
+    margin-top: 18px;
+}
+
+.contactItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+
+    color: rgba(255, 255, 255, 0.6);
+
+    font-size: 12px;
+    line-height: 1.6;
+
+    text-decoration: none;
+
+    transition: color 180ms ease;
+}
+
+.contactItem:hover {
+    color: rgba(255, 255, 255, 0.94);
+}
+
+.contactItem strong {
+    color: rgba(255, 255, 255, 0.72);
+
+    font-weight: 500;
+}
+
+.contactIcon {
+    width: 18px;
+    height: 18px;
+
+    flex: 0 0 18px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 1px;
+
+    color: rgba(255, 255, 255, 0.64);
+}
+
+.contactIcon svg {
+    width: 16px;
+    height: 16px;
+}
+
+.footerBottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footerBottomInner {
+    width: min(100% - 48px, var(--header-max-width));
+
+    min-height: 58px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    color: rgba(255, 255, 255, 0.4);
+
+    font-size: 10px;
+    letter-spacing: 0.02em;
+}
+
+@media (max-width: 1250px) {
+    .footerInner {
+        grid-template-columns:
+            minmax(210px, 1.4fr)
+            repeat(3, minmax(130px, 1fr))
+            minmax(210px, 1.2fr);
+    }
+
+    .navigation {
+        grid-column: 2 / 5;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 36px;
+    }
+
+    .contactColumn {
+        grid-column: 5;
+    }
+}
+
+@media (max-width: 900px) {
+    .footerInner {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 48px 36px;
+
+        padding: 56px 0;
+    }
+
+    .brandColumn {
+        grid-column: 1 / -1;
+    }
+
+    .navigation {
+        grid-column: 1;
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contactColumn {
+        grid-column: 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer {
+        margin-top: 60px;
+    }
+
+    .footerInner {
+        width: min(100% - 32px, var(--header-max-width));
+
+        grid-template-columns: 1fr;
+
+        gap: 38px;
+
+        padding: 48px 0;
+    }
+
+    .brandColumn,
+    .navigation,
+    .contactColumn {
+        grid-column: 1;
+    }
+
+    .navigation {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 34px 24px;
+    }
+
+    .contactColumn {
+        padding-top: 4px;
+    }
+
+    .footerBottomInner {
+        width: min(100% - 32px, var(--header-max-width));
+
+        min-height: auto;
+
+        padding: 18px 0;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 7px;
+
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 420px) {
+    .navigation {
+        grid-template-columns: 1fr;
+    }
+}

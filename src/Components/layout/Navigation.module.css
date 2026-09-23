@@ -1,4 +1,25 @@
-/* navbar.module.css */
+.navLink,
+.navDropdownTrigger,
+.navDropdownLink,
+.navDropdownMenu a,
+.navbar a {
+    color: #ffffff !important;
+}
+
+/* Burger menu */
+.burgerButton,
+.menuButton,
+.navToggle {
+    color: #ffffff !important;
+}
+
+.burgerButton svg,
+.menuButton svg,
+.navToggle svg {
+    color: #ffffff !important;
+    stroke: #ffffff !important;
+}
+
 
 .navbarShell {
     position: fixed;
@@ -424,6 +445,7 @@
     justify-content: center;
     flex-direction: column;
     gap: 5px;
+    color: #ffffff!important;
 
     border: 0;
     border-radius: 12px;
@@ -438,7 +460,7 @@
 
     display: block;
 
-    background: var(--text-primary);
+    background: white;
 
     transition:
             transform 180ms ease,
@@ -584,6 +606,13 @@
 
         padding: 4px 0 6px;
     }
+    .navLink,
+    .navDropdownTrigger,
+    .navDropdownLink,
+    .navDropdownMenu a,
+    .navbar a {
+        color: #ffffff !important;
+    }
 
     .navDropdownMenuInner {
         width: 100%;
@@ -594,6 +623,7 @@
         border-radius: 12px;
 
         background: rgba(35, 25, 31, 0.22);
+        color: #ffffff;
 
         box-shadow: none;
 
