@@ -1,4 +1,4 @@
-import ScrollReveal from "../../components/common/ScrollReveal";
+import ScrollReveal from "../../Components/common/ScrollReveal.tsx";
 import styles from "./AboutUs.module.css";
 
 const methodologySteps = [
