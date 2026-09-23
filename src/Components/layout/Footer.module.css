@@ -19,8 +19,8 @@
             0 -20px 60px rgba(60, 38, 49, 0.12),
             inset 0 1px 0 rgba(255, 255, 255, 0.08);
 
-    backdrop-filter: blur(30px) saturate(140%);
-    -webkit-backdrop-filter: blur(30px) saturate(140%);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
 }
 
 .footerInner {

@@ -1,22 +1,23 @@
+/* src/Pages/Services/Services.module.css */
+
 .page {
     width: min(100% - 48px, 1400px);
 
     margin: 0 auto;
 
     padding: 30px 0 100px;
-
-    padding-top: 50px;
 }
 
 .hero {
-    min-height: 680px;
+    min-height: 650px;
 
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(400px, 0.9fr);
+    grid-template-columns: minmax(0, 1fr) minmax(400px, 0.88fr);
     align-items: center;
+
     gap: 70px;
 
-    padding: 60px 0 90px;
+    padding: 55px 0 80px;
 }
 
 .eyebrow {
@@ -26,6 +27,7 @@
     margin-bottom: 18px;
 
     color: var(--accent);
+
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 0.2em;
@@ -44,14 +46,15 @@
             "Times New Roman",
             serif;
 
-    font-size: clamp(42px, 5vw, 76px);
+    font-size: clamp(44px, 5vw, 76px);
     font-weight: 400;
     line-height: 1.02;
+
     letter-spacing: -0.04em;
 }
 
-.heroText {
-    max-width: 670px;
+.hero > div > p {
+    max-width: 680px;
 
     margin: 30px 0 0;
 
@@ -64,7 +67,7 @@
 .heroVisual {
     position: relative;
 
-    min-height: 520px;
+    min-height: 500px;
 
     overflow: hidden;
 
@@ -76,29 +79,29 @@
     background:
             linear-gradient(
                     145deg,
-                    rgba(255, 255, 255, 0.7),
-                    rgba(226, 216, 222, 0.35)
+                    rgba(112, 76, 96, 0.74),
+                    rgba(181, 153, 171, 0.55)
             );
 
-    border: 1px solid rgba(255, 255, 255, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 
     box-shadow:
-            0 30px 80px rgba(90, 65, 76, 0.1),
-            0 10px 30px rgba(90, 65, 76, 0.06);
+            0 30px 80px rgba(80, 55, 68, 0.14),
+            0 10px 30px rgba(80, 55, 68, 0.07);
 }
 
-.heroVisualGlow {
+.heroGlow {
     position: absolute;
 
-    width: 420px;
-    height: 420px;
+    width: 450px;
+    height: 450px;
 
-    top: -100px;
-    right: -80px;
+    top: -140px;
+    right: -100px;
 
     border-radius: 50%;
 
-    background: rgba(194, 142, 165, 0.3);
+    background: rgba(248, 192, 218, 0.28);
 
     filter: blur(70px);
 }
@@ -108,58 +111,67 @@
 
     position: absolute;
 
-    width: 340px;
-    height: 340px;
+    width: 360px;
+    height: 360px;
 
-    left: -100px;
-    bottom: 50px;
+    left: -120px;
+    bottom: -100px;
 
     border-radius: 50%;
 
-    background: rgba(158, 105, 226, 0.16);
+    background: rgba(184, 165, 244, 0.22);
 
-    filter: blur(80px);
+    filter: blur(75px);
 }
 
-.heroVisualContent {
+.heroContent {
     position: relative;
     z-index: 1;
 
-    width: 100%;
-
-    padding: 35px;
+    padding: 38px;
 }
 
-.heroVisualContent span {
+.heroContent span {
     display: block;
 
     margin-bottom: 8px;
 
-    color: rgba(85, 67, 77, 0.52);
+    color: rgba(255, 255, 255, 0.58);
 
     font-size: 9px;
     font-weight: 700;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.22em;
 }
 
-.heroVisualContent strong {
-    color: black;
+.heroContent strong {
+    display: block;
+
+    color: white;
 
     font-family:
             Georgia,
             "Times New Roman",
             serif;
 
-    font-size: 25px;
+    font-size: 29px;
     font-weight: 400;
-    letter-spacing: 0.04em;
+}
+
+.heroContent small {
+    display: block;
+
+    margin-top: 12px;
+
+    color: rgba(255, 255, 255, 0.5);
+
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
 }
 
 .introSection,
-.methodologySection,
-.salonSection,
-.productsSection,
-.routineSection,
+.servicesSection,
+.featureSection,
 .ctaSection {
     margin-top: 35px;
 }
@@ -180,8 +192,8 @@
 
     box-shadow: var(--glass-shadow);
 
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(25px) saturate(140%);
+    -webkit-backdrop-filter: blur(25px) saturate(140%);
 }
 
 .introLabel {
@@ -199,7 +211,7 @@
 }
 
 .introLabel span {
-    width: 25px;
+    width: 26px;
     height: 1px;
 
     background: var(--accent);
@@ -207,16 +219,14 @@
 
 .introGrid {
     display: grid;
-    grid-template-columns: minmax(0, 1.4fr) minmax(240px, 0.6fr);
+    grid-template-columns: minmax(0, 1.3fr) minmax(240px, 0.7fr);
+
     gap: 80px;
+
     align-items: end;
 }
 
-.introGrid h2,
-.sectionHeading h2,
-.salonContent h2,
-.routineCard h2,
-.ctaCard h2 {
+.introGrid h2 {
     margin: 0;
 
     color: black;
@@ -226,17 +236,15 @@
             "Times New Roman",
             serif;
 
+    font-size: clamp(36px, 4vw, 55px);
     font-weight: 400;
+    line-height: 1.05;
+
     letter-spacing: -0.03em;
 }
 
-.introGrid h2 {
-    font-size: clamp(34px, 4vw, 52px);
-    line-height: 1.05;
-}
-
 .introGrid p {
-    max-width: 730px;
+    max-width: 720px;
 
     margin: 22px 0 0;
 
@@ -247,7 +255,7 @@
 }
 
 .introQuote {
-    padding: 25px 0 10px 28px;
+    padding: 24px 0 10px 28px;
 
     border-left: 1px solid rgba(156, 104, 125, 0.3);
 }
@@ -257,11 +265,11 @@
 
     font-size: 11px;
     font-weight: 700;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.14em;
 }
 
 .introQuote p {
-    margin-top: 12px;
+    margin-top: 13px;
 
     color: black;
 
@@ -274,79 +282,18 @@
     line-height: 1.35;
 }
 
-.methodologySection {
+.servicesSection {
     padding: 70px 0 20px;
 }
 
 .sectionHeading {
-    max-width: 820px;
+    max-width: 800px;
 
-    margin-bottom: 50px;
+    margin-bottom: 45px;
 }
 
 .sectionHeading h2 {
-    font-size: clamp(35px, 4vw, 56px);
-    line-height: 1.08;
-}
-
-.sectionHeading p {
-    max-width: 690px;
-
-    margin: 22px 0 0;
-
-    color: var(--text-secondary);
-
-    font-size: 14px;
-    line-height: 1.9;
-}
-
-.stepsGrid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
-}
-
-.stepCard {
-    min-height: 320px;
-
-    padding: 32px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    border-radius: 24px;
-
-    background: rgba(255, 255, 255, 0.46);
-
-    border: 1px solid rgba(255, 255, 255, 0.8);
-
-    box-shadow:
-            0 18px 50px rgba(90, 65, 76, 0.06),
-            inset 0 1px 0 rgba(255, 255, 255, 0.6);
-
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-}
-
-.stepNumber {
-    color: var(--accent);
-
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-}
-
-.stepContent span {
-    color: var(--text-muted);
-
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 0.18em;
-}
-
-.stepContent h3 {
-    margin: 10px 0 12px;
+    margin: 0;
 
     color: black;
 
@@ -355,20 +302,196 @@
             "Times New Roman",
             serif;
 
-    font-size: 28px;
+    font-size: clamp(36px, 4vw, 55px);
     font-weight: 400;
+    line-height: 1.05;
+
+    letter-spacing: -0.03em;
 }
 
-.stepContent p {
+.sectionHeading p {
+    max-width: 650px;
+
+    margin: 20px 0 0;
+
+    color: var(--text-secondary);
+
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.serviceCard {
+    min-height: 420px;
+
+    padding: 32px;
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 25px;
+
+    background:
+            linear-gradient(
+                    135deg,
+                    rgba(255, 255, 255, 0.67),
+                    rgba(255, 255, 255, 0.42)
+            );
+
+    border: 1px solid rgba(255, 255, 255, 0.78);
+
+    box-shadow:
+            0 18px 50px rgba(90, 65, 76, 0.06),
+            inset 0 1px 0 rgba(255, 255, 255, 0.55);
+
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+
+    transition:
+            transform 220ms ease,
+            box-shadow 220ms ease;
+}
+
+.serviceCard:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+            0 24px 60px rgba(90, 65, 76, 0.1),
+            inset 0 1px 0 rgba(255, 255, 255, 0.55);
+}
+
+.serviceTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.serviceNumber {
+    color: var(--accent);
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+}
+
+.serviceCategory {
+    color: var(--text-muted);
+
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+}
+
+.serviceBody {
+    flex: 1;
+
+    padding: 50px 0 30px;
+}
+
+.serviceBody h3 {
     margin: 0;
+
+    color: black;
+
+    font-family:
+            Georgia,
+            "Times New Roman",
+            serif;
+
+    font-size: 31px;
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+.serviceBody > p {
+    max-width: 590px;
+
+    margin: 17px 0 0;
 
     color: var(--text-secondary);
 
     font-size: 13px;
-    line-height: 1.8;
+    line-height: 1.85;
 }
 
-.salonCard {
+.serviceDetails {
+    margin-top: 25px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.serviceDetails span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: var(--text-secondary);
+
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.serviceDetails i {
+    width: 5px;
+    height: 5px;
+
+    flex: 0 0 auto;
+
+    border-radius: 50%;
+
+    background: var(--accent);
+}
+
+.serviceLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    width: fit-content;
+
+    color: var(--accent-dark);
+
+    font-size: 11px;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition:
+            gap 180ms ease,
+            color 180ms ease;
+}
+
+.serviceLink svg {
+    width: 15px;
+    height: 15px;
+
+    transition: transform 180ms ease;
+}
+
+.serviceLink:hover {
+    gap: 14px;
+
+    color: var(--accent);
+}
+
+.serviceLink:hover svg {
+    transform: translateX(2px);
+}
+
+.featureSection {
+    padding: 70px 0 20px;
+}
+
+.featureCard {
     overflow: hidden;
 
     display: grid;
@@ -391,8 +514,8 @@
     -webkit-backdrop-filter: blur(25px);
 }
 
-.salonVisual {
-    min-height: 560px;
+.featureVisual {
+    min-height: 550px;
 
     position: relative;
 
@@ -404,30 +527,28 @@
     background:
             linear-gradient(
                     145deg,
-                    rgba(112, 76, 96, 0.72),
-                    rgba(178, 148, 166, 0.55)
+                    rgba(113, 77, 97, 0.73),
+                    rgba(177, 149, 166, 0.55)
             );
 }
 
-.salonVisual::before {
-    content: "";
-
+.featureVisualGlow {
     position: absolute;
 
-    width: 430px;
-    height: 430px;
+    width: 450px;
+    height: 450px;
 
-    top: -100px;
-    left: -100px;
+    top: -120px;
+    left: -120px;
 
     border-radius: 50%;
 
-    background: rgba(246, 196, 218, 0.24);
+    background: rgba(247, 194, 216, 0.22);
 
-    filter: blur(65px);
+    filter: blur(75px);
 }
 
-.salonVisual::after {
+.featureVisual::after {
     content: "";
 
     position: absolute;
@@ -435,35 +556,38 @@
     width: 380px;
     height: 380px;
 
-    right: -130px;
-    bottom: -110px;
+    right: -120px;
+    bottom: -120px;
 
     border-radius: 50%;
 
-    background: rgba(185, 160, 244, 0.2);
+    background: rgba(184, 161, 240, 0.2);
 
     filter: blur(75px);
 }
 
-.salonVisualInner {
+.featureVisualText {
     position: relative;
     z-index: 1;
 
     padding: 42px;
 }
 
-.salonVisualInner span {
+.featureVisualText span {
     display: block;
 
-    margin-bottom: 7px;
+    margin-bottom: 12px;
 
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.55);
 
-    font-size: 9px;
-    letter-spacing: 0.2em;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.19em;
 }
 
-.salonVisualInner strong {
+.featureVisualText strong {
+    display: block;
+
     color: white;
 
     font-family:
@@ -471,145 +595,17 @@
             "Times New Roman",
             serif;
 
-    font-size: 27px;
+    font-size: 29px;
     font-weight: 400;
+    line-height: 1.2;
 }
 
-.salonContent {
+.featureContent {
     padding: 65px;
 }
 
-.salonContent h2 {
-    font-size: clamp(36px, 4vw, 55px);
-    line-height: 1.05;
-}
-
-.salonContent p {
-    max-width: 630px;
-
-    margin: 23px 0 0;
-
-    color: var(--text-secondary);
-
-    font-size: 14px;
-    line-height: 1.9;
-}
-
-.textLink,
-.productLink {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-
-    color: var(--accent-dark);
-
-    font-size: 12px;
-    font-weight: 600;
-    text-decoration: none;
-
-    transition:
-            gap 180ms ease,
-            color 180ms ease;
-}
-
-.textLink {
-    margin-top: 30px;
-}
-
-.textLink svg,
-.productLink svg,
-.primaryButton svg {
-    width: 15px;
-    height: 15px;
-
-    transition: transform 180ms ease;
-}
-
-.textLink:hover,
-.productLink:hover {
-    gap: 14px;
-
-    color: var(--accent);
-}
-
-.textLink:hover svg,
-.productLink:hover svg,
-.primaryButton:hover svg {
-    transform: translateX(2px);
-}
-
-.productsSection {
-    padding: 70px 0 20px;
-}
-
-.productsGrid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
-}
-
-.productCard {
-    overflow: hidden;
-
-    border-radius: 24px;
-
-    background: rgba(255, 255, 255, 0.5);
-
-    border: 1px solid rgba(255, 255, 255, 0.82);
-
-    box-shadow:
-            0 18px 50px rgba(90, 65, 76, 0.06);
-
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-}
-
-.productImage {
-    min-height: 270px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 35px;
-
-    background:
-            linear-gradient(
-                    145deg,
-                    rgba(239, 234, 236, 0.88),
-                    rgba(220, 208, 216, 0.72)
-            );
-}
-
-.productImage span {
-    color: rgba(86, 66, 76, 0.56);
-
-    font-family:
-            Georgia,
-            "Times New Roman",
-            serif;
-
-    font-size: 23px;
-    line-height: 1.2;
-    text-align: center;
-    letter-spacing: 0.05em;
-}
-
-.productBody {
-    padding: 25px;
-}
-
-.productCategory {
-    color: var(--accent);
-
-    font-size: 8px;
-    font-weight: 700;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-}
-
-.productBody h3 {
-    margin: 8px 0 10px;
+.featureContent h2 {
+    margin: 0;
 
     color: black;
 
@@ -618,72 +614,30 @@
             "Times New Roman",
             serif;
 
-    font-size: 25px;
+    font-size: clamp(38px, 4vw, 56px);
     font-weight: 400;
+    line-height: 1.05;
+
+    letter-spacing: -0.03em;
 }
 
-.productBody p {
-    min-height: 75px;
+.featureContent p {
+    max-width: 620px;
 
-    margin: 0 0 20px;
-
-    color: var(--text-secondary);
-
-    font-size: 12px;
-    line-height: 1.75;
-}
-
-.routineSection {
-    padding: 60px 0 20px;
-}
-
-.routineCard {
-    padding: 55px 65px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 50px;
-
-    border-radius: 28px;
-
-    background:
-            linear-gradient(
-                    135deg,
-                    rgba(156, 104, 125, 0.13),
-                    rgba(158, 105, 226, 0.08)
-            );
-
-    border: 1px solid rgba(255, 255, 255, 0.78);
-
-    box-shadow: var(--glass-shadow);
-
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-}
-
-.routineCard h2 {
-    font-size: clamp(32px, 3.5vw, 48px);
-    line-height: 1.08;
-}
-
-.routineCard p {
-    max-width: 720px;
-
-    margin: 20px 0 0;
+    margin: 22px 0 0;
 
     color: var(--text-secondary);
 
     font-size: 14px;
-    line-height: 1.85;
+    line-height: 1.9;
 }
 
 .primaryButton {
-    flex: 0 0 auto;
-
     min-height: 48px;
 
-    padding: 0 22px;
+    padding: 0 21px;
+
+    margin-top: 30px;
 
     display: inline-flex;
     align-items: center;
@@ -707,9 +661,21 @@
             background 180ms ease;
 }
 
+.primaryButton svg {
+    width: 15px;
+    height: 15px;
+
+    transition: transform 180ms ease;
+}
+
 .primaryButton:hover {
     background: var(--accent);
+
     transform: translateY(-2px);
+}
+
+.primaryButton:hover svg {
+    transform: translateX(2px);
 }
 
 .ctaSection {
@@ -717,7 +683,7 @@
 }
 
 .ctaCard {
-    padding: 80px 50px;
+    padding: 80px 45px;
 
     text-align: center;
 
@@ -741,10 +707,20 @@
 }
 
 .ctaCard h2 {
+    margin: 0;
+
     color: white;
 
+    font-family:
+            Georgia,
+            "Times New Roman",
+            serif;
+
     font-size: clamp(38px, 4vw, 60px);
+    font-weight: 400;
     line-height: 1.05;
+
+    letter-spacing: -0.03em;
 }
 
 .ctaCard p {
@@ -759,8 +735,6 @@
 }
 
 .ctaCard .primaryButton {
-    margin-top: 30px;
-
     background: rgba(255, 255, 255, 0.94);
     color: var(--accent-dark);
 
@@ -790,29 +764,16 @@
         gap: 35px;
     }
 
-    .stepsGrid {
+    .servicesGrid {
         grid-template-columns: 1fr;
     }
 
-    .stepCard {
-        min-height: 280px;
-    }
-
-    .salonCard {
+    .featureCard {
         grid-template-columns: 1fr;
     }
 
-    .salonVisual {
+    .featureVisual {
         min-height: 380px;
-    }
-
-    .productsGrid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .routineCard {
-        flex-direction: column;
-        align-items: flex-start;
     }
 }
 
@@ -830,10 +791,10 @@
     }
 
     .hero h1 {
-        font-size: clamp(38px, 12vw, 58px);
+        font-size: clamp(39px, 12vw, 58px);
     }
 
-    .heroText {
+    .hero > div > p {
         font-size: 13px;
         line-height: 1.8;
     }
@@ -844,16 +805,16 @@
         border-radius: 24px;
     }
 
-    .heroVisualContent {
-        padding: 27px;
+    .heroContent {
+        padding: 28px;
     }
 
-    .heroVisualContent strong {
-        font-size: 20px;
+    .heroContent strong {
+        font-size: 23px;
     }
 
     .introCard,
-    .salonContent {
+    .featureContent {
         padding: 32px 25px;
     }
 
@@ -873,8 +834,8 @@
         font-size: 20px;
     }
 
-    .methodologySection,
-    .productsSection {
+    .servicesSection,
+    .featureSection {
         padding-top: 45px;
     }
 
@@ -886,41 +847,47 @@
         font-size: 36px;
     }
 
-    .salonCard {
+    .serviceCard {
+        min-height: 0;
+
+        padding: 27px;
+
+        border-radius: 22px;
+    }
+
+    .serviceBody {
+        padding: 40px 0 30px;
+    }
+
+    .serviceBody h3 {
+        font-size: 27px;
+    }
+
+    .featureCard {
         border-radius: 24px;
     }
 
-    .salonVisual {
-        min-height: 300px;
+    .featureVisual {
+        min-height: 310px;
     }
 
-    .salonVisualInner {
+    .featureVisualText {
         padding: 28px;
     }
 
-    .salonContent h2 {
+    .featureVisualText strong {
+        font-size: 23px;
+    }
+
+    .featureContent h2 {
         font-size: 36px;
     }
 
-    .productsGrid {
-        grid-template-columns: 1fr;
+    .featureContent p {
+        font-size: 13px;
     }
 
-    .productImage {
-        min-height: 240px;
-    }
-
-    .routineCard {
-        padding: 35px 25px;
-
-        border-radius: 24px;
-    }
-
-    .routineCard h2 {
-        font-size: 34px;
-    }
-
-    .routineCard .primaryButton {
+    .primaryButton {
         width: 100%;
     }
 

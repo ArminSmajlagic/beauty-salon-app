@@ -253,7 +253,7 @@ export default function Home() {
                                 </p>
 
                                 <a
-                                    href="/beauty-salon-app/o-nama"
+                                    href="#/o-nama"
                                     className={styles.primaryButton}
                                 >
                                     Saznaj više
@@ -321,7 +321,7 @@ export default function Home() {
 
                         <div className={styles.sectionButton}>
                             <a
-                                href="/biologique-recherche/o-brandu"
+                                href="#/biologique-recherche/o-brandu"
                                 className={styles.primaryButton}
                             >
                                 Saznaj više
@@ -436,7 +436,7 @@ export default function Home() {
 
                         <div className={styles.sectionButton}>
                             <a
-                                href="/usluge"
+                                href="#/usluge"
                                 className={styles.primaryButton}
                             >
                                 Saznaj više
@@ -562,7 +562,7 @@ export default function Home() {
 
                         <div className={styles.sectionButton}>
                             <a
-                                href="/web-shop/proizvodi"
+                                href="#/web-shop"
                                 className={styles.primaryButton}
                             >
                                 Pogledaj više

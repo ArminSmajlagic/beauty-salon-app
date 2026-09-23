@@ -34,7 +34,7 @@
 .welcomeSection h1 {
     margin: 18px 0 0;
 
-    color: var(--text-primary);
+    color: black;
 
     font-family:
             Georgia,
@@ -117,8 +117,8 @@
 
     box-shadow: var(--glass-shadow);
 
-    backdrop-filter: blur(28px) saturate(140%);
-    -webkit-backdrop-filter: blur(28px) saturate(140%);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
 }
 
 .glassSection .sectionInner {
@@ -133,7 +133,7 @@
 .philosophyContent h2 {
     margin: 14px 0 0;
 
-    color: var(--text-primary);
+    color: black;
 
     font-family:
             Georgia,
@@ -216,7 +216,7 @@
 .aboutHighlight h3 {
     margin: 22px 0 12px;
 
-    color: var(--text-primary);
+    color: black;
 
     font-family:
             Georgia,
@@ -326,8 +326,8 @@
             0 18px 50px rgba(80, 58, 68, 0.07),
             inset 0 1px 0 rgba(255, 255, 255, 0.58);
 
-    backdrop-filter: blur(24px) saturate(135%);
-    -webkit-backdrop-filter: blur(24px) saturate(135%);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
 }
 
 .stepNumber {
@@ -354,7 +354,7 @@
 .methodologyCard h3 {
     margin: 26px 0 14px;
 
-    color: var(--text-primary);
+    color: black;
 
     font-family:
             Georgia,
@@ -418,14 +418,14 @@
 
     box-shadow: var(--glass-shadow);
 
-    backdrop-filter: blur(28px) saturate(140%);
-    -webkit-backdrop-filter: blur(28px) saturate(140%);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
 }
 
 .contactCard h2 {
     margin: 14px 0 0;
 
-    color: var(--text-primary);
+    color: black;
 
     font-family:
             Georgia,

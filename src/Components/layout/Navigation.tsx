@@ -19,10 +19,10 @@ type NavItem =
 const navigation: NavItem[] = [
     { label: "Naslovna", href: "#/" },
     { label: "O Nama", href: "#/o-nama" },
-    { label: "Web Shop",href: "#/web-shop" },
     {
         label: "Usluge",
         children: [
+            { label: "O uslugama", href: "#/usluge" },
             { label: "Njega Lica", href: "#/usluge/njega-lica" },
             { label: "Njega Tijela", href: "#/usluge/njega-tijela" },
             { label: "Make-Up", href: "#/usluge/make-up" },
@@ -34,7 +34,7 @@ const navigation: NavItem[] = [
         children: [
             {
                 label: "O Brandu",
-                href: "#/biologique-recherche/o-brandu",
+                href: "#/biologique-recherche",
             },
             {
                 label: "Njega Lica",
@@ -54,6 +54,7 @@ const navigation: NavItem[] = [
             },
         ],
     },
+    { label: "Web Shop",href: "#/web-shop" },
     { label: "Kontakt", href: "#/kontakt" },
 ];
 

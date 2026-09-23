@@ -95,8 +95,8 @@
 
     box-shadow: var(--glass-shadow);
 
-    backdrop-filter: blur(28px) saturate(140%);
-    -webkit-backdrop-filter: blur(28px) saturate(140%);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
 }
 
 .cardHeader h2 {

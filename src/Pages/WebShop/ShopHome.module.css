@@ -37,7 +37,7 @@
 .headerSection h1 {
     margin: 16px 0 0;
 
-    color: var(--text-primary);
+    color: black;
 
     font-family:
             Georgia,
@@ -116,14 +116,14 @@
     background:
             linear-gradient(
                     135deg,
-                    rgba(255, 255, 255, 0.68),
-                    rgba(255, 255, 255, 0.42)
+                    rgb(255 255 255 / 0.46),
+                    rgb(255 255 255 / 0.2)
             );
 
     box-shadow: var(--glass-shadow);
 
-    backdrop-filter: blur(28px) saturate(140%);
-    -webkit-backdrop-filter: blur(28px) saturate(140%);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
 }
 
 .shopSection .sectionInner {
@@ -142,7 +142,7 @@
 .shopHeader h2 {
     margin: 13px 0 0;
 
-    color: var(--text-primary);
+    color: black;
 
     font-family:
             Georgia,
@@ -322,7 +322,7 @@
 .productContent h3 {
     margin: 8px 0 0;
 
-    color: var(--text-primary);
+    color: black;
 
     font-family:
             Georgia,
@@ -355,7 +355,7 @@
 }
 
 .productBottom strong {
-    color: var(--text-primary);
+    color: black;
 
     font-size: 13px;
     font-weight: 600;

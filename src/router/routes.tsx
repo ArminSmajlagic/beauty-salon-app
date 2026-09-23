@@ -5,6 +5,8 @@ import Contact from "../Pages/Contact/Contact";
 import Home from "../Pages/Home/Naslovna.tsx";
 import AboutUs from "../Pages/About/AboutUs.tsx";
 import WebShop from "../Pages/WebShop/ShopHome.tsx";
+import Biologique from "../Pages/BiologiqueResearch/Biologique.tsx";
+import Services from "../Pages/Services/Services.tsx";
 
 
 export const router = createHashRouter([
@@ -27,6 +29,14 @@ export const router = createHashRouter([
             {
                 path: "web-shop",
                 element: <WebShop />,
+            },
+            {
+                path: "biologique-recherche",
+                element: <Biologique />,
+            },
+            {
+                path: "usluge",
+                element: <Services />,
             },
         ],
     },
