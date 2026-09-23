@@ -18,40 +18,38 @@ type NavItem =
 
 const navigation: NavItem[] = [
     { label: "Naslovna", href: "/" },
-    { label: "O Nama", href: "/o-nama" },
+    { label: "O Nama", href: "/beauty-salon-app/o-nama" },
     {
         label: "Web Shop",
-        children: [
-            { label: "Početna", href: "/web-shop" },
-            { label: "Kategorije", href: "/web-shop/kategorije" },
-        ],
+        href: "/beauty-salon-app/web-shop",
     },
     {
         label: "Usluge",
         children: [
-            { label: "Njega Lica", href: "/usluge/njega-lica" },
-            { label: "Njega Tijela", href: "/usluge/njega-tijela" },
-            { label: "Make-Up", href: "/usluge/make-up" },
-            { label: "Cjenovnik", href: "/usluge/cjenovnik" },
+            { label: "O uslugama", href: "/beauty-salon-app/usluge" },
+            { label: "Njega Lica", href: "/beauty-salon-app/usluge/njega-lica" },
+            { label: "Njega Tijela", href: "/beauty-salon-app/usluge/njega-tijela" },
+            { label: "Make-Up", href: "/beauty-salon-app/usluge/make-up" },
+            { label: "Cjenovnik", href: "/beauty-salon-app/usluge/cjenovnik" },
         ],
     },
     {
         label: "Biologique Recherche",
         children: [
-            { label: "O Brandu", href: "/biologique-recherche/o-brandu" },
-            { label: "Njega Lica", href: "/biologique-recherche/njega-lica" },
-            { label: "Njega Tijela", href: "/biologique-recherche/njega-tijela" },
+            { label: "O Brandu", href: "/beauty-salon-app/biologique-recherche/o-brandu" },
+            { label: "Njega Lica", href: "/beauty-salon-app/biologique-recherche/njega-lica" },
+            { label: "Njega Tijela", href: "/beauty-salon-app/biologique-recherche/njega-tijela" },
             {
                 label: "Svi Proizvodi",
-                href: "/biologique-recherche/proizvodi",
+                href: "/beauty-salon-app/biologique-recherche/proizvodi",
             },
             {
                 label: "Cjenovnik",
-                href: "/biologique-recherche/cjenovnik",
+                href: "/beauty-salon-app/biologique-recherche/cjenovnik",
             },
         ],
     },
-    { label: "Kontakt", href: "/kontakt" },
+    { label: "Kontakt", href: "/beauty-salon-app/kontakt" },
 ];
 
 function ChevronIcon({ open }: { open: boolean }) {
@@ -174,28 +172,41 @@ function NavDropdown({
             className={`${styles.navDropdown} ${
                 open ? styles.navDropdownOpen : ""
             }`}
-            onMouseEnter={() => setOpen(true)}
-            onMouseLeave={() => setOpen(false)}
+            onMouseEnter={() => {
+                if (window.innerWidth > 1050) {
+                    setOpen(true);
+                }
+            }}
+            onMouseLeave={() => {
+                if (window.innerWidth > 1050) {
+                    setOpen(false);
+                }
+            }}
         >
             <button
                 type="button"
                 className={`${styles.navbarLink} ${styles.navDropdownTrigger}`}
                 aria-expanded={open}
-                onClick={() =>
-                    setOpen((value) => !value)
-                }
+                onClick={() => setOpen((value) => !value)}
             >
                 <span>{label}</span>
+
                 <ChevronIcon open={open} />
             </button>
 
             <div className={styles.navDropdownMenu}>
-                <div className={styles.navDropdownMenuInner}>
+                <div
+                    className={
+                        styles.navDropdownMenuInner
+                    }
+                >
                     {items.map((item) => (
                         <a
                             key={item.href}
                             href={item.href}
-                            className={styles.navDropdownItem}
+                            className={
+                                styles.navDropdownItem
+                            }
                             onClick={() => {
                                 setOpen(false);
                                 onNavigate?.();

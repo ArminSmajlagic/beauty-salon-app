@@ -4,6 +4,7 @@ import styles from "./Naslovna.module.css";
 import serumVivant from "../../assets/serum-vivant.mp4";
 import bsProducts from "../../assets/bs-products-2.jpg";
 import ScrollReveal from "../../Components/common/ScrollReveal.tsx";
+import {products} from "../../data/data.ts";
 
 type HeroSlide =
     | {
@@ -42,59 +43,6 @@ const services = [
     {
         title: "Pro MakeUp",
         text: "Profesionalno šminkanje za posebne prilike, događaje i trenutke u kojima želite zablistati. Look prilagođavamo vašem stilu, crtama lica i željenom efektu.",
-    },
-];
-
-const products = [
-    {
-        name: "Lait U",
-        price: "78,00 KM",
-        category: "Njega lica",
-    },
-    {
-        name: "Lotion P50",
-        price: "115,00 KM",
-        category: "Njega lica",
-    },
-    {
-        name: "Masque Vivant",
-        price: "145,00 KM",
-        category: "Njega lica",
-    },
-    {
-        name: "Crème Dermopurifiante",
-        price: "165,00 KM",
-        category: "Njega lica",
-    },
-    {
-        name: "Sérum Elastine",
-        price: "210,00 KM",
-        category: "Njega lica",
-    },
-    {
-        name: "Huile Souveraine",
-        price: "185,00 KM",
-        category: "Njega tijela",
-    },
-    {
-        name: "Lait E.V.",
-        price: "92,00 KM",
-        category: "Njega tijela",
-    },
-    {
-        name: "Crème MSR-H",
-        price: "175,00 KM",
-        category: "Njega lica",
-    },
-    {
-        name: "Sérum Colostrum",
-        price: "220,00 KM",
-        category: "Njega lica",
-    },
-    {
-        name: "Emulsion Gel Biosensible",
-        price: "155,00 KM",
-        category: "Njega lica",
     },
 ];
 
@@ -305,7 +253,7 @@ export default function Home() {
                                 </p>
 
                                 <a
-                                    href="/o-nama"
+                                    href="/beauty-salon-app/o-nama"
                                     className={styles.primaryButton}
                                 >
                                     Saznaj više

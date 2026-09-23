@@ -12,38 +12,46 @@ type FooterCategory = {
 };
 
 const footerNavigation: FooterCategory[] = [
-
+    {
+        label: "O nama",
+        items: [
+            {
+                label: "Početna",
+                href: "/beauty-salon-app/o-nama",
+            }
+        ],
+    },
     {
         label: "Web Shop",
         items: [
             {
                 label: "Početna",
-                href: "/web-shop",
-            },
-            {
-                label: "Kategorije",
-                href: "/web-shop/kategorije",
-            },
+                href: "/beauty-salon-app/web-shop",
+            }
         ],
     },
     {
         label: "Usluge",
         items: [
             {
+                label: "O uslugama",
+                href: "/beauty-salon-app/usluge/usluge",
+            },
+            {
                 label: "Njega Lica",
-                href: "/usluge/njega-lica",
+                href: "/beauty-salon-app/usluge/njega-lica",
             },
             {
                 label: "Njega Tijela",
-                href: "/usluge/njega-tijela",
+                href: "/beauty-salon-app/usluge/njega-tijela",
             },
             {
                 label: "Make-Up",
-                href: "/usluge/make-up",
+                href: "/beauty-salon-app/usluge/make-up",
             },
             {
                 label: "Cjenovnik",
-                href: "/usluge/cjenovnika",
+                href: "/beauty-salon-app/usluge/cjenovnika",
             },
         ],
     },
@@ -71,7 +79,7 @@ const footerNavigation: FooterCategory[] = [
                 href: "/biologique-recherche/cjenovnik",
             },
         ],
-    },
+    }
 ];
 
 function FacebookIcon() {
