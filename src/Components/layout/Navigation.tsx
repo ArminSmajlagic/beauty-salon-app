@@ -17,39 +17,44 @@ type NavItem =
 };
 
 const navigation: NavItem[] = [
-    { label: "Naslovna", href: "/" },
-    { label: "O Nama", href: "/beauty-salon-app/o-nama" },
-    {
-        label: "Web Shop",
-        href: "/beauty-salon-app/web-shop",
-    },
+    { label: "Naslovna", href: "#/" },
+    { label: "O Nama", href: "#/o-nama" },
+    { label: "Web Shop",href: "#/web-shop" },
     {
         label: "Usluge",
         children: [
-            { label: "O uslugama", href: "/beauty-salon-app/usluge" },
-            { label: "Njega Lica", href: "/beauty-salon-app/usluge/njega-lica" },
-            { label: "Njega Tijela", href: "/beauty-salon-app/usluge/njega-tijela" },
-            { label: "Make-Up", href: "/beauty-salon-app/usluge/make-up" },
-            { label: "Cjenovnik", href: "/beauty-salon-app/usluge/cjenovnik" },
+            { label: "Njega Lica", href: "#/usluge/njega-lica" },
+            { label: "Njega Tijela", href: "#/usluge/njega-tijela" },
+            { label: "Make-Up", href: "#/usluge/make-up" },
+            { label: "Cjenovnik", href: "#/usluge/cjenovnik" },
         ],
     },
     {
         label: "Biologique Recherche",
         children: [
-            { label: "O Brandu", href: "/beauty-salon-app/biologique-recherche/o-brandu" },
-            { label: "Njega Lica", href: "/beauty-salon-app/biologique-recherche/njega-lica" },
-            { label: "Njega Tijela", href: "/beauty-salon-app/biologique-recherche/njega-tijela" },
+            {
+                label: "O Brandu",
+                href: "#/biologique-recherche/o-brandu",
+            },
+            {
+                label: "Njega Lica",
+                href: "#/biologique-recherche/njega-lica",
+            },
+            {
+                label: "Njega Tijela",
+                href: "#/biologique-recherche/njega-tijela",
+            },
             {
                 label: "Svi Proizvodi",
-                href: "/beauty-salon-app/biologique-recherche/proizvodi",
+                href: "#/biologique-recherche/proizvodi",
             },
             {
                 label: "Cjenovnik",
-                href: "/beauty-salon-app/biologique-recherche/cjenovnik",
+                href: "#/biologique-recherche/cjenovnik",
             },
         ],
     },
-    { label: "Kontakt", href: "/beauty-salon-app/kontakt" },
+    { label: "Kontakt", href: "#/kontakt" },
 ];
 
 function ChevronIcon({ open }: { open: boolean }) {
