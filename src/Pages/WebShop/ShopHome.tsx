@@ -131,9 +131,9 @@ export default function WebShop() {
                                                 styles.productBottom
                                             }
                                         >
-                                            <strong>
-                                                {product.price}
-                                            </strong>
+                                            {/*<strong>*/}
+                                            {/*    {product.price}*/}
+                                            {/*</strong>*/}
 
                                             <button
                                                 type="button"
