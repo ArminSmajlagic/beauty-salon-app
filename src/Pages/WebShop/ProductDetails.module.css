@@ -2,8 +2,8 @@
     width: min(100% - 48px, 1400px);
     margin: 0 auto;
     padding: 25px 0 100px;
-    margin-top: 20px!important;
-    color: var(--text-primary);
+    margin-top: 70px!important;
+    color: black;
 }
 
 .breadcrumbs {
@@ -17,7 +17,7 @@
 }
 
 .breadcrumbs a {
-    color: var(--text-secondary);
+    color: black;
     text-decoration: none;
     transition: color 180ms ease;
 }
@@ -27,7 +27,7 @@
 }
 
 .currentBreadcrumb {
-    color: var(--text-primary);
+    color: black;
 }
 
 .eyebrow {
@@ -254,7 +254,7 @@
 
 .description {
     margin: 0;
-    color: var(--text-secondary);
+    color: black;
     font-size: 14px;
     line-height: 1.95;
 }
@@ -286,7 +286,7 @@
 }
 
 .productMeta strong {
-    color: var(--text-primary);
+    color: black;
     font-size: 11px;
     font-weight: 600;
     line-height: 1.6;
@@ -385,7 +385,7 @@
 .sectionHeading > p {
     max-width: 730px;
     margin: 18px 0 0;
-    color: var(--text-secondary);
+    color: black;
     font-size: 13px;
     line-height: 1.9;
 }
@@ -443,7 +443,7 @@
 
 .detailCard p {
     margin: 13px 0 0;
-    color: var(--text-secondary);
+    color: black;
     font-size: 12px;
     line-height: 1.85;
 }
@@ -490,7 +490,7 @@
 
 .routineCard p {
     margin: 12px 0 0;
-    color: var(--text-secondary);
+    color: black;
     font-size: 12px;
     line-height: 1.85;
 }
@@ -552,7 +552,7 @@
 .brandContent > p {
     max-width: 620px;
     margin: 20px 0 0;
-    color: var(--text-secondary);
+    color: black;
     font-size: 13px;
     line-height: 1.9;
 }
@@ -588,7 +588,287 @@
     transform: translateY(-3px);
     box-shadow: 0 22px 50px rgba(90, 65, 76, 0.09);
 }
+.relatedProductsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    width: 100%;
+    min-width: 0;
+}
 
+.relatedProductCard {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    height: 100%;
+    overflow: hidden;
+
+    color: var(--text-primary, #3d3036);
+    text-decoration: none;
+
+    border: 1px solid rgba(255, 255, 255, 0.78);
+    border-radius: 22px;
+
+    background: rgba(255, 255, 255, 0.58);
+    box-shadow: var(--glass-shadow);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    transition:
+            transform 220ms ease,
+            box-shadow 220ms ease,
+            border-color 220ms ease;
+}
+
+.relatedProductCard:hover {
+    transform: translateY(-5px);
+    border-color: rgba(156, 104, 125, 0.3);
+    box-shadow: 0 20px 45px rgba(101, 70, 82, 0.13);
+}
+
+.relatedProductCard:focus-visible {
+    outline: 2px solid var(--accent, #9c687d);
+    outline-offset: 4px;
+}
+
+/* Product placeholder */
+
+.relatedProductVisual {
+    position: relative;
+    isolation: isolate;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    min-height: 180px;
+
+    overflow: hidden;
+
+    background: linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.96),
+            rgba(246, 237, 241, 0.92) 55%,
+            rgba(236, 221, 229, 0.88)
+    );
+
+    border-bottom: 1px solid rgba(156, 104, 125, 0.12);
+}
+
+.relatedProductGlow {
+    position: absolute;
+    z-index: -1;
+
+    top: 5%;
+    left: 50%;
+
+    width: 80%;
+    aspect-ratio: 1;
+
+    transform: translateX(-50%);
+    border-radius: 50%;
+
+    background: radial-gradient(
+            circle,
+            rgba(190, 133, 158, 0.28) 0%,
+            rgba(190, 133, 158, 0.12) 42%,
+            transparent 72%
+    );
+
+    filter: blur(12px);
+}
+
+.relatedProductDecoration {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+
+    color: rgba(61, 48, 54, 0.14);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(52px, 6vw, 78px);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.09em;
+
+    user-select: none;
+}
+
+.relatedProductMonogram {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    color: #3d3036;
+
+    font-family: Georgia, "Times New Roman", serif;
+    text-align: center;
+    letter-spacing: 0.18em;
+}
+
+.relatedProductMonogram span {
+    font-size: clamp(10px, 1vw, 12px);
+    font-weight: 400;
+}
+
+.relatedProductMonogram strong {
+    font-size: clamp(12px, 1.2vw, 15px);
+    font-weight: 400;
+    letter-spacing: 0.14em;
+}
+
+.relatedProductMonogram i {
+    display: block;
+    width: 38px;
+    height: 1px;
+    margin-top: 7px;
+    background: #b77d98;
+}
+
+.relatedProductFooter {
+    position: absolute;
+    right: 14px;
+    bottom: 12px;
+    left: 14px;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+
+    color: #51434a;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+}
+
+.relatedProductFooter span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Product information */
+
+.relatedProductBody {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 22px;
+}
+
+.relatedProductCategory {
+    display: block;
+    margin-bottom: 10px;
+
+    color: var(--accent, #9c687d);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.relatedProductName {
+    margin: 0 0 22px;
+    width: 100%;
+
+    color: var(--text-primary, #3d3036);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(18px, 1.5vw, 22px);
+    font-weight: 400;
+    line-height: 1.4;
+
+    overflow-wrap: anywhere;
+}
+
+.relatedProductAction {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    width: 100%;
+    margin-top: auto;
+    padding-top: 14px;
+
+    color: var(--accent-dark, #7e4e63);
+    border-top: 1px solid rgba(156, 104, 125, 0.16);
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.relatedProductAction > span {
+    font-size: 19px;
+    transition: transform 220ms ease;
+}
+
+.relatedProductCard:hover .relatedProductAction > span {
+    transform: translateX(4px);
+}
+
+/* Responsive layout */
+
+@media (max-width: 900px) {
+    .relatedProductsGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .relatedProductBody {
+        padding: 18px;
+    }
+
+    .relatedProductName {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 560px) {
+    .relatedProductsGrid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .relatedProductCard {
+        border-radius: 18px;
+    }
+
+    .relatedProductVisual {
+        min-height: 200px;
+    }
+
+    .relatedProductBody {
+        padding: 20px;
+    }
+
+    .relatedProductName {
+        font-size: 21px;
+        margin-bottom: 18px;
+    }
+
+    .relatedProductDecoration {
+        font-size: 64px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .relatedProductCard,
+    .relatedProductAction > span {
+        transition: none;
+    }
+
+    .relatedProductCard:hover {
+        transform: none;
+    }
+}
 .relatedVisual {
     aspect-ratio: 4 / 3;
     padding: 20px;
@@ -637,7 +917,7 @@
 
 .relatedBody h3 {
     margin: 9px 0 0;
-    color: var(--text-primary);
+    color: black;
     font-family: Georgia, "Times New Roman", serif;
     font-size: 23px;
     font-weight: 400;
@@ -735,7 +1015,7 @@
 .notFound p {
     max-width: 500px;
     margin: 18px 0 0;
-    color: var(--text-secondary);
+    color: black;
     font-size: 13px;
     line-height: 1.8;
 }

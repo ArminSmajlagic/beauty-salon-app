@@ -156,27 +156,47 @@ function ProductVisual({ product }: { product: Product }) {
     );
 }
 
-function RelatedProductCard({ product }: { product: Product }) {
+type RelatedProductCardProps = {
+    product: (typeof products)[number];
+};
+
+function RelatedProductCard({ product }: RelatedProductCardProps) {
     return (
         <Link
             to={`/biologique-recherche/proizvod/${slugifyProductName(product.name)}`}
-            className={styles.relatedCard}
+            className={styles.relatedProductCard}
         >
-            <div className={styles.relatedVisual}>
-                {product.image ? (
-                    <img src={product.image} alt={product.name} />
-                ) : (
-                    <ProductMonogram />
-                )}
+            <div className={styles.relatedProductVisual} aria-hidden="true">
+                <div className={styles.relatedProductGlow} />
+
+                <span className={styles.relatedProductDecoration}>
+                    BR
+                </span>
+
+                <div className={styles.relatedProductMonogram}>
+                    <span>BIOLOGIQUE</span>
+                    <strong>RECHERCHE</strong>
+                    <i />
+                </div>
+
+                <div className={styles.relatedProductFooter}>
+                    <span>{product.category.toUpperCase()}</span>
+                </div>
             </div>
 
-            <div className={styles.relatedBody}>
-                <span>{product.category}</span>
-                <h3>{product.name}</h3>
-                <div className={styles.relatedLink}>
-                    Pogledaj proizvod
-                    <ArrowIcon />
-                </div>
+            <div className={styles.relatedProductBody}>
+                <span className={styles.relatedProductCategory}>
+                    {product.category}
+                </span>
+
+                <h3 className={styles.relatedProductName}>
+                    {product.name}
+                </h3>
+
+                <span className={styles.relatedProductAction}>
+                    Detalji proizvoda
+                    <span aria-hidden="true">→</span>
+                </span>
             </div>
         </Link>
     );
@@ -492,16 +512,12 @@ export default function ProductDetails() {
                         </div>
                     </ScrollReveal>
 
-                    <div className={styles.relatedGrid}>
-                        {relatedProducts.map((relatedProduct) => (
-                            <ScrollReveal
-                                key={relatedProduct.name}
-                                distance={20}
-                            >
-                                <RelatedProductCard
-                                    product={relatedProduct}
-                                />
-                            </ScrollReveal>
+                    <div className={styles.relatedProductsGrid}>
+                        {relatedProducts.map((product) => (
+                            <RelatedProductCard
+                                key={product.name}
+                                product={product}
+                            />
                         ))}
                     </div>
                 </section>

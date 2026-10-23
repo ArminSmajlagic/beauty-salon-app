@@ -4,7 +4,8 @@
     width: min(100% - 48px, 1400px);
     margin: 0 auto;
     padding: 30px 0 100px;
-    color: var(--text-primary);
+    color: black;
+    margin-top:70px!important ;
 }
 
 /* =========================================================
@@ -47,7 +48,7 @@
 .hero > div > p {
     max-width: 660px;
     margin: 27px 0 0;
-    color: var(--text-secondary);
+    color: black;
     font-size: 14px;
     line-height: 1.95;
 }
@@ -67,7 +68,7 @@
     border: 1px solid rgba(255, 255, 255, 0.82);
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.4);
-    color: var(--text-secondary);
+    color: black;
     font-size: 10px;
 }
 
@@ -145,7 +146,7 @@
     z-index: 1;
     max-width: 380px;
     margin: 17px 0 0;
-    color: var(--text-secondary);
+    color: black;
     font-size: 12px;
     line-height: 1.85;
 }
@@ -176,7 +177,7 @@
 
 .sectionHeading h2 {
     margin: 0;
-    color: var(--text-primary);
+    color: black;
     font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(36px, 4vw, 55px);
     font-weight: 400;
@@ -187,7 +188,7 @@
 .sectionHeading > p {
     max-width: 700px;
     margin: 19px 0 0;
-    color: var(--text-secondary);
+    color: black;
     font-size: 13px;
     line-height: 1.9;
 }
@@ -217,7 +218,7 @@
     border: 1px solid rgba(255, 255, 255, 0.85);
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.42);
-    color: var(--text-secondary);
+    color: black;
     font-family: inherit;
     font-size: 11px;
     font-weight: 500;
@@ -480,7 +481,7 @@
 
 .productBody h3 {
     margin: 0;
-    color: var(--text-primary);
+    color: black;
     font-family: Georgia, "Times New Roman", serif;
     font-size: 25px;
     font-weight: 400;
@@ -491,7 +492,7 @@
 .productBody > p {
     flex: 1;
     margin: 12px 0 17px;
-    color: var(--text-secondary);
+    color: black;
     font-size: 12px;
     line-height: 1.85;
 }
@@ -584,7 +585,7 @@
 .emptyState p {
     max-width: 480px;
     margin: 14px 0 0;
-    color: var(--text-secondary);
+    color: black;
     font-size: 13px;
     line-height: 1.8;
 }
@@ -670,7 +671,7 @@
 .infoContent > p {
     max-width: 700px;
     margin: 18px 0 0;
-    color: var(--text-secondary);
+    color: black;
     font-size: 13px;
     line-height: 1.9;
 }

@@ -2,7 +2,7 @@
     position: relative;
     width: 100%;
     padding-bottom: 40px;
-    padding-top: 50px;
+    margin-top:70px!important ;
 }
 
 .heroImageSection {
@@ -610,7 +610,7 @@
     }
 
     .heroImageSection {
-        width: min(100% - 32px, var(--header-max-width));
+        width: min(100%);
         margin-bottom: 55px;
     }
 

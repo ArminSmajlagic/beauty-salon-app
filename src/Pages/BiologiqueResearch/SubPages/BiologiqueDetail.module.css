@@ -2,7 +2,8 @@
     width: min(100% - 48px, 1400px);
     margin: 0 auto;
     padding: 30px 0 100px;
-    color: var(--text-primary);
+    margin-top:70px!important ;
+    color: black;
 }
 
 .eyebrow {
@@ -37,7 +38,7 @@
 .heroDescription {
     max-width: 690px;
     margin: 28px 0 0;
-    color: var(--text-secondary);
+    color: black;
     font-size: 14px;
     line-height: 1.95;
 }
@@ -58,7 +59,7 @@
     border: 1px solid rgba(255, 255, 255, 0.82);
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.4);
-    color: var(--text-secondary);
+    color: black;
     font-size: 10px;
 }
 
@@ -144,7 +145,7 @@
     z-index: 1;
     max-width: 390px;
     margin: 17px 0 0;
-    color: var(--text-secondary);
+    color: black;
     font-size: 12px;
     line-height: 1.85;
 }
@@ -242,7 +243,7 @@
 .introMain p {
     max-width: 770px;
     margin: 22px 0 0;
-    color: var(--text-secondary);
+    color: black;
     font-size: 13px;
     line-height: 1.95;
 }
@@ -303,7 +304,7 @@
 .sectionHeading > p {
     max-width: 720px;
     margin: 20px 0 0;
-    color: var(--text-secondary);
+    color: black;
     font-size: 13px;
     line-height: 1.9;
 }
@@ -372,7 +373,7 @@
 
 .methodDescription {
     margin: 14px 0 0;
-    color: var(--text-secondary);
+    color: black;
     font-size: 12px;
     line-height: 1.85;
 }
@@ -388,7 +389,7 @@
     display: flex;
     align-items: flex-start;
     gap: 9px;
-    color: var(--text-secondary);
+    color: black;
     font-size: 10px;
     line-height: 1.6;
 }
@@ -466,7 +467,7 @@
 
 .productCard > p {
     margin: 13px 0 22px;
-    color: var(--text-secondary);
+    color: black;
     font-size: 12px;
     line-height: 1.85;
 }
@@ -539,7 +540,7 @@
 
 .protocolRow > p {
     margin: 0;
-    color: var(--text-secondary);
+    color: black;
     font-size: 12px;
     line-height: 1.8;
 }
@@ -609,7 +610,7 @@
 
 .noteContent p {
     margin: 14px 0 0;
-    color: var(--text-secondary);
+    color: black;
     font-size: 12px;
     line-height: 1.9;
 }

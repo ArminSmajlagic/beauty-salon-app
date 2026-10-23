@@ -271,11 +271,13 @@ export default function Home() {
                                 </a>
                             </div>
 
-                            <div className={styles.servicesImage}>
-                                <div className={styles.servicesImageContainer}>
-                                    <img src={aboutImage} alt=""/>
-                                </div>
-                            </div>
+                            <section className={styles.heroImageSection}>
+                                <img
+                                    src={aboutImage}
+                                    alt="Studio Ljepote Alma & Selma"
+                                    className={styles.largeImage}
+                                />
+                            </section>
                         </div>
                     </div>
                 </section>
@@ -386,9 +388,11 @@ export default function Home() {
                             <div className={styles.serviceCard}>
                                 <div className={styles.servicesImage}>
                                     <div className={styles.servicesImageContainer}>
-                                        <img src={services[
-                                            activeService
-                                            ].src} alt=""/>
+                                        <img
+                                            className={styles.responsiveImage}
+                                            src={services[activeService].src}
+                                            alt={services[activeService].title}
+                                        />
                                     </div>
                                 </div>
 
