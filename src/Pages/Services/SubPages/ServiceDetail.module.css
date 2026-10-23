@@ -1,0 +1,712 @@
+.page {
+    width: min(100% - 48px, 1400px);
+    margin: 0 auto;
+    padding: 30px 0 100px;
+    color: var(--text-primary);
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 18px;
+    color: var(--accent);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.hero {
+    min-height: 570px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(350px, 0.8fr);
+    align-items: center;
+    gap: 80px;
+    padding: 55px 0 80px;
+}
+
+.hero h1 {
+    max-width: 760px;
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(44px, 5vw, 76px);
+    font-weight: 400;
+    line-height: 1.04;
+    letter-spacing: -0.045em;
+}
+
+.heroDescription {
+    max-width: 680px;
+    margin: 28px 0 0;
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.95;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.tag {
+    min-height: 35px;
+    padding: 0 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.38);
+    color: var(--text-secondary);
+    font-size: 10px;
+}
+
+.tag i,
+.cardPoint i {
+    width: 5px;
+    height: 5px;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    background: var(--accent);
+}
+
+.heroCard {
+    position: relative;
+    min-height: 380px;
+    overflow: hidden;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.76);
+    border-radius: 28px;
+    background:
+            radial-gradient(
+                    circle at 95% 5%,
+                    rgba(219, 166, 190, 0.22),
+                    transparent 38%
+            ),
+            linear-gradient(
+                    145deg,
+                    rgba(255, 255, 255, 0.78),
+                    rgba(237, 225, 232, 0.48)
+            );
+    box-shadow:
+            0 24px 65px rgba(90, 65, 76, 0.08),
+            inset 0 1px 0 rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(24px) saturate(140%);
+    -webkit-backdrop-filter: blur(24px) saturate(140%);
+}
+
+.heroCardTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    color: var(--text-muted);
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+}
+
+.heroCardDivider {
+    width: 100%;
+    height: 1px;
+    margin: 22px 0 34px;
+    background: rgba(156, 104, 125, 0.19);
+}
+
+.heroCardLabel {
+    color: var(--accent);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+}
+
+.heroCard h2 {
+    position: relative;
+    z-index: 1;
+    margin: 13px 0 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(30px, 3vw, 42px);
+    font-weight: 400;
+    line-height: 1.14;
+    letter-spacing: -0.025em;
+}
+
+.heroCard > p {
+    position: relative;
+    z-index: 1;
+    max-width: 400px;
+    margin: 17px 0 0;
+    color: var(--text-secondary);
+    font-size: 12px;
+    line-height: 1.85;
+}
+
+.heroCardLink {
+    position: relative;
+    z-index: 1;
+    width: fit-content;
+    margin-top: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--accent-dark);
+    font-size: 11px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.heroCardLink svg,
+.contactButton svg {
+    width: 15px;
+    height: 15px;
+    transition: transform 180ms ease;
+}
+
+.heroCardLink:hover svg,
+.contactButton:hover svg {
+    transform: translateX(3px);
+}
+
+.heroCardNumber {
+    position: absolute;
+    right: 20px;
+    bottom: -38px;
+    color: rgba(156, 104, 125, 0.08);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 170px;
+    line-height: 1;
+    pointer-events: none;
+}
+
+.introSection,
+.servicesSection,
+.processSection,
+.noteSection,
+.contactSection {
+    margin-top: 35px;
+}
+
+.introCard {
+    padding: 65px;
+    border: 1px solid var(--glass-border);
+    border-radius: 30px;
+    background:
+            linear-gradient(
+                    135deg,
+                    rgba(255, 255, 255, 0.72),
+                    rgba(255, 255, 255, 0.45)
+            );
+    box-shadow: var(--glass-shadow);
+    backdrop-filter: blur(25px) saturate(140%);
+    -webkit-backdrop-filter: blur(25px) saturate(140%);
+}
+
+.introLabel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 28px;
+    color: var(--text-muted);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+}
+
+.introLabel span {
+    width: 25px;
+    height: 1px;
+    background: var(--accent);
+}
+
+.introGrid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(220px, 0.6fr);
+    align-items: end;
+    gap: 75px;
+}
+
+.introMain h2 {
+    max-width: 760px;
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(34px, 4vw, 52px);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.035em;
+}
+
+.introMain p {
+    max-width: 760px;
+    margin: 22px 0 0;
+    color: var(--text-secondary);
+    font-size: 13px;
+    line-height: 1.95;
+}
+
+.introQuote {
+    padding: 22px 0 8px 25px;
+    border-left: 1px solid rgba(156, 104, 125, 0.3);
+}
+
+.introQuote > span {
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+}
+
+.introQuote p {
+    margin: 13px 0 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 23px;
+    line-height: 1.4;
+}
+
+.servicesSection,
+.processSection {
+    padding: 65px 0 15px;
+}
+
+.sectionHeading {
+    max-width: 800px;
+    margin-bottom: 38px;
+}
+
+.sectionHeading h2 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(36px, 4vw, 55px);
+    font-weight: 400;
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+}
+
+.sectionHeading > p {
+    max-width: 680px;
+    margin: 20px 0 0;
+    color: var(--text-secondary);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.serviceCard {
+    min-height: 340px;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.82);
+    border-radius: 24px;
+    background:
+            linear-gradient(
+                    135deg,
+                    rgba(255, 255, 255, 0.66),
+                    rgba(255, 255, 255, 0.4)
+            );
+    box-shadow:
+            0 18px 50px rgba(90, 65, 76, 0.055),
+            inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition:
+            transform 200ms ease,
+            box-shadow 200ms ease;
+}
+
+.serviceCard:hover {
+    transform: translateY(-3px);
+    box-shadow:
+            0 24px 55px rgba(90, 65, 76, 0.09),
+            inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.cardTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.cardNumber {
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+}
+
+.cardCategory {
+    color: var(--text-muted);
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-align: right;
+}
+
+.cardBody {
+    flex: 1;
+    padding: 35px 0 12px;
+}
+
+.cardBody h3 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 29px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.cardBody > p {
+    margin: 14px 0 0;
+    color: var(--text-secondary);
+    font-size: 12px;
+    line-height: 1.85;
+}
+
+.cardPoints {
+    margin-top: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.cardPoint {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--text-secondary);
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.cardPoint i {
+    margin-top: 6px;
+}
+
+.stepsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.stepCard {
+    min-height: 230px;
+    padding: 27px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.42);
+    box-shadow: 0 16px 45px rgba(90, 65, 76, 0.045);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+.stepNumber {
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+}
+
+.stepLine {
+    width: 35px;
+    height: 1px;
+    margin: 24px 0;
+    background: rgba(156, 104, 125, 0.4);
+}
+
+.stepCard h3 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.stepCard p {
+    margin: 12px 0 0;
+    color: var(--text-secondary);
+    font-size: 12px;
+    line-height: 1.85;
+}
+
+.noteCard {
+    padding: 40px 45px;
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: 35px;
+    border: 1px solid var(--glass-border);
+    border-radius: 26px;
+    background:
+            linear-gradient(
+                    135deg,
+                    rgba(156, 104, 125, 0.1),
+                    rgba(158, 105, 226, 0.055)
+            );
+    box-shadow: var(--glass-shadow);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+}
+
+.noteIndex {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.noteIndex span {
+    color: var(--accent);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+}
+
+.noteIndex strong {
+    color: rgba(156, 104, 125, 0.55);
+    font-size: 34px;
+    font-weight: 400;
+}
+
+.noteContent h2 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(28px, 3vw, 38px);
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+.noteContent p {
+    margin: 14px 0 0;
+    color: var(--text-secondary);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.contactSection {
+    padding-top: 55px;
+}
+
+.contactCard {
+    padding: 75px 35px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    background:
+            linear-gradient(
+                    135deg,
+                    rgba(112, 76, 96, 0.84),
+                    rgba(178, 148, 166, 0.75)
+            );
+    box-shadow: 0 30px 70px rgba(70, 48, 61, 0.14);
+}
+
+.contactEyebrow {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+}
+
+.contactCard h2 {
+    margin: 0;
+    color: #fff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(34px, 4vw, 55px);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.035em;
+}
+
+.contactCard > p {
+    max-width: 650px;
+    margin: 22px auto 0;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.contactButton {
+    min-height: 48px;
+    margin-top: 30px;
+    padding: 0 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 13px;
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--accent-dark);
+    font-size: 11px;
+    font-weight: 600;
+    text-decoration: none;
+    transition:
+            transform 180ms ease,
+            background 180ms ease;
+}
+
+.contactButton:hover {
+    transform: translateY(-2px);
+    background: #fff;
+}
+
+@media (max-width: 1050px) {
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .heroCard {
+        min-height: 340px;
+    }
+
+    .introGrid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .stepsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .stepCard {
+        min-height: auto;
+    }
+
+    .noteCard {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .noteIndex {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+@media (max-width: 700px) {
+    .page {
+        width: min(100% - 28px, 1400px);
+        padding: 25px 0 60px;
+    }
+
+    .hero {
+        min-height: auto;
+        gap: 30px;
+        padding: 30px 0 50px;
+    }
+
+    .hero h1 {
+        font-size: clamp(39px, 11vw, 57px);
+    }
+
+    .heroDescription {
+        font-size: 13px;
+        line-height: 1.85;
+    }
+
+    .heroCard {
+        min-height: 330px;
+        padding: 25px;
+        border-radius: 23px;
+    }
+
+    .heroCard h2 {
+        font-size: 33px;
+    }
+
+    .introCard {
+        padding: 32px 25px;
+        border-radius: 24px;
+    }
+
+    .introMain h2 {
+        font-size: 36px;
+    }
+
+    .introMain p {
+        font-size: 12px;
+    }
+
+    .introQuote {
+        padding-left: 20px;
+    }
+
+    .introQuote p {
+        font-size: 21px;
+    }
+
+    .servicesSection,
+    .processSection {
+        padding-top: 45px;
+    }
+
+    .sectionHeading {
+        margin-bottom: 28px;
+    }
+
+    .sectionHeading h2 {
+        font-size: 36px;
+    }
+
+    .cardsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .serviceCard {
+        min-height: auto;
+        padding: 25px;
+        border-radius: 22px;
+    }
+
+    .cardBody {
+        padding-top: 30px;
+        padding-bottom: 15px;
+    }
+
+    .cardBody h3 {
+        font-size: 27px;
+    }
+
+    .noteCard {
+        padding: 28px 24px;
+        border-radius: 22px;
+    }
+
+    .noteContent h2 {
+        font-size: 30px;
+    }
+
+    .contactSection {
+        padding-top: 35px;
+    }
+
+    .contactCard {
+        padding: 52px 23px;
+        border-radius: 24px;
+    }
+
+    .contactCard h2 {
+        font-size: 35px;
+    }
+
+    .contactCard > p {
+        font-size: 12px;
+    }
+
+    .contactButton {
+        width: 100%;
+        max-width: 280px;
+    }
+}

@@ -1,0 +1,990 @@
+/* src/Pages/Biologique/Products.module.css */
+
+.page {
+    width: min(100% - 48px, 1400px);
+    margin: 0 auto;
+    padding: 30px 0 100px;
+    color: var(--text-primary);
+}
+
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+
+.eyebrow {
+    display: inline-flex;
+    margin-bottom: 18px;
+    color: var(--accent);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 560px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(350px, 0.8fr);
+    align-items: center;
+    gap: 70px;
+    padding: 50px 0 75px;
+}
+
+.hero h1 {
+    max-width: 760px;
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(43px, 5vw, 74px);
+    font-weight: 400;
+    line-height: 1.04;
+    letter-spacing: -0.045em;
+}
+
+.hero > div > p {
+    max-width: 660px;
+    margin: 27px 0 0;
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.95;
+}
+
+.heroTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 27px;
+}
+
+.heroTags span {
+    min-height: 34px;
+    padding: 0 13px;
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.82);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.4);
+    color: var(--text-secondary);
+    font-size: 10px;
+}
+
+.heroCard {
+    position: relative;
+    min-height: 370px;
+    overflow: hidden;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.82);
+    border-radius: 28px;
+    background:
+            radial-gradient(
+                    circle at 100% 0%,
+                    rgba(217, 169, 191, 0.3),
+                    transparent 42%
+            ),
+            radial-gradient(
+                    circle at 0% 100%,
+                    rgba(161, 136, 201, 0.14),
+                    transparent 38%
+            ),
+            linear-gradient(
+                    145deg,
+                    rgba(255, 255, 255, 0.77),
+                    rgba(237, 225, 232, 0.51)
+            );
+    box-shadow:
+            0 24px 65px rgba(90, 65, 76, 0.08),
+            inset 0 1px 0 rgba(255, 255, 255, 0.76);
+    backdrop-filter: blur(24px) saturate(140%);
+    -webkit-backdrop-filter: blur(24px) saturate(140%);
+}
+
+.heroCardHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    color: var(--text-muted);
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+}
+
+.decorativeLine {
+    width: 100%;
+    height: 1px;
+    margin: 23px 0 34px;
+    background: rgba(156, 104, 125, 0.19);
+}
+
+.heroCardLabel {
+    color: var(--accent);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+}
+
+.heroCard h2 {
+    position: relative;
+    z-index: 1;
+    margin: 13px 0 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(30px, 3vw, 42px);
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+}
+
+.heroCard > p {
+    position: relative;
+    z-index: 1;
+    max-width: 380px;
+    margin: 17px 0 0;
+    color: var(--text-secondary);
+    font-size: 12px;
+    line-height: 1.85;
+}
+
+.heroCardDecoration {
+    position: absolute;
+    right: 10px;
+    bottom: -43px;
+    color: rgba(156, 104, 125, 0.07);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 175px;
+    line-height: 1;
+    pointer-events: none;
+}
+
+/* =========================================================
+   PRODUCT CATALOG
+========================================================= */
+
+.catalogSection {
+    padding-top: 50px;
+}
+
+.sectionHeading {
+    max-width: 850px;
+    margin-bottom: 35px;
+}
+
+.sectionHeading h2 {
+    margin: 0;
+    color: var(--text-primary);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(36px, 4vw, 55px);
+    font-weight: 400;
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+}
+
+.sectionHeading > p {
+    max-width: 700px;
+    margin: 19px 0 0;
+    color: var(--text-secondary);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* =========================================================
+   FILTERS
+========================================================= */
+
+.filters {
+    margin-bottom: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.filterGroup {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.filterButton {
+    min-height: 41px;
+    padding: 0 17px;
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.42);
+    color: var(--text-secondary);
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 500;
+    cursor: pointer;
+    transition:
+            background 180ms ease,
+            color 180ms ease,
+            border-color 180ms ease,
+            transform 180ms ease;
+}
+
+.filterButton:hover {
+    border-color: rgba(156, 104, 125, 0.3);
+    background: rgba(255, 255, 255, 0.75);
+    color: var(--accent-dark);
+}
+
+.filterButtonActive {
+    border-color: var(--accent-dark);
+    background: var(--accent-dark);
+    color: #fff;
+}
+
+.filterButtonActive:hover {
+    border-color: var(--accent);
+    background: var(--accent);
+    color: #fff;
+}
+
+.productCount {
+    flex: 0 0 auto;
+    color: var(--text-muted);
+    font-size: 10px;
+}
+
+/* =========================================================
+   PRODUCT GRID
+========================================================= */
+
+.productsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.productCard {
+    min-width: 0;
+    height: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.82);
+    border-radius: 24px;
+    background:
+            linear-gradient(
+                    145deg,
+                    rgba(255, 255, 255, 0.72),
+                    rgba(255, 255, 255, 0.44)
+            );
+    box-shadow:
+            0 18px 48px rgba(90, 65, 76, 0.055),
+            inset 0 1px 0 rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(22px) saturate(140%);
+    -webkit-backdrop-filter: blur(22px) saturate(140%);
+    transition:
+            transform 220ms ease,
+            box-shadow 220ms ease;
+}
+
+.productCard:hover {
+    transform: translateY(-4px);
+    box-shadow:
+            0 25px 58px rgba(90, 65, 76, 0.1),
+            inset 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+
+.productTop {
+    min-height: 27px;
+    padding: 1px 4px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.productNumber {
+    color: var(--accent);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+}
+
+.productCategory {
+    color: var(--text-muted);
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+/* =========================================================
+   PRODUCT MONOGRAM PLACEHOLDER
+========================================================= */
+
+.productVisualButton {
+    width: 100%;
+    margin: 10px 0 0;
+    padding: 0;
+    display: block;
+    overflow: hidden;
+    border: 0;
+    border-radius: 17px;
+    background: transparent;
+    text-align: inherit;
+    cursor: pointer;
+}
+
+.productVisual {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    min-height: 190px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.82);
+    border-radius: 17px;
+    background:
+            radial-gradient(
+                    circle at 80% 8%,
+                    rgba(217, 169, 191, 0.3),
+                    transparent 42%
+            ),
+            radial-gradient(
+                    circle at 5% 95%,
+                    rgba(161, 136, 201, 0.15),
+                    transparent 40%
+            ),
+            linear-gradient(
+                    145deg,
+                    rgba(255, 255, 255, 0.82),
+                    rgba(231, 219, 227, 0.62)
+            );
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.78);
+    transition: background 200ms ease;
+}
+
+.productVisualGlow {
+    position: absolute;
+    z-index: -1;
+    top: -75px;
+    right: -80px;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background: rgba(179, 139, 162, 0.22);
+    filter: blur(55px);
+}
+
+.productVisual::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: -70px;
+    bottom: -100px;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background: rgba(160, 133, 200, 0.15);
+    filter: blur(55px);
+}
+
+.productVisualDecoration {
+    position: absolute;
+    right: 8px;
+    bottom: -30px;
+    color: rgba(156, 104, 125, 0.075);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(100px, 11vw, 155px);
+    line-height: 1;
+    pointer-events: none;
+}
+
+.productMonogram {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    padding: 12px;
+    color: rgba(83, 64, 75, 0.7);
+    text-align: center;
+    line-height: 1;
+    transition: transform 220ms ease;
+}
+
+.productMonogram span {
+    font-family: Arial, sans-serif;
+    font-size: clamp(9px, 1vw, 12px);
+    font-weight: 400;
+    letter-spacing: 0.25em;
+}
+
+.productMonogram strong {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(21px, 2.1vw, 29px);
+    font-weight: 400;
+    letter-spacing: 0.045em;
+}
+
+.productMonogram i {
+    width: 48px;
+    height: 1px;
+    margin-top: 5px;
+    background: rgba(156, 104, 125, 0.7);
+}
+
+.productVisualFooter {
+    position: absolute;
+    right: 12px;
+    bottom: 10px;
+    left: 12px;
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    color: rgba(83, 64, 75, 0.55);
+    font-size: 7px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    pointer-events: none;
+}
+
+.productVisualButton:hover .productMonogram {
+    transform: scale(1.035);
+}
+
+.productVisualButton:focus-visible,
+.productButton:focus-visible,
+.filterButton:focus-visible,
+.resetButton:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+}
+
+/* =========================================================
+   PRODUCT INFORMATION
+========================================================= */
+
+.productBody {
+    flex: 1;
+    padding: 21px 5px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.productBody h3 {
+    margin: 0;
+    color: var(--text-primary);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+}
+
+.productBody > p {
+    flex: 1;
+    margin: 12px 0 17px;
+    color: var(--text-secondary);
+    font-size: 12px;
+    line-height: 1.85;
+}
+
+.productFooter {
+    width: 100%;
+    min-height: 28px;
+    padding-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    border-top: 1px solid rgba(156, 104, 125, 0.13);
+}
+
+.infoLabel {
+    color: var(--text-muted);
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+}
+
+.productButton {
+    width: 100%;
+    min-height: 43px;
+    margin-top: 14px;
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    border: 1px solid rgba(156, 104, 125, 0.2);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.45);
+    color: var(--accent-dark);
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+            color 180ms ease,
+            background 180ms ease,
+            border-color 180ms ease,
+            transform 180ms ease;
+}
+
+.productButton svg {
+    width: 15px;
+    height: 15px;
+    flex: 0 0 auto;
+    transition: transform 180ms ease;
+}
+
+.productButton:hover {
+    transform: translateY(-1px);
+    border-color: var(--accent-dark);
+    background: var(--accent-dark);
+    color: #fff;
+}
+
+.productButton:hover svg {
+    transform: translateX(3px);
+}
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.emptyState {
+    min-height: 260px;
+    padding: 40px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.82);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.44);
+    text-align: center;
+    box-shadow: var(--glass-shadow);
+}
+
+.emptyState h3 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.emptyState p {
+    max-width: 480px;
+    margin: 14px 0 0;
+    color: var(--text-secondary);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.resetButton {
+    min-height: 42px;
+    margin-top: 23px;
+    padding: 0 17px;
+    border: 1px solid rgba(156, 104, 125, 0.22);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.65);
+    color: var(--accent-dark);
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 180ms ease, color 180ms ease;
+}
+
+.resetButton:hover {
+    background: var(--accent-dark);
+    color: #fff;
+}
+
+/* =========================================================
+   INFORMATION PANEL
+========================================================= */
+
+.infoSection {
+    margin-top: 70px;
+}
+
+.infoCard {
+    padding: 42px 45px;
+    display: grid;
+    grid-template-columns: 190px minmax(0, 1fr);
+    gap: 38px;
+    border: 1px solid var(--glass-border);
+    border-radius: 26px;
+    background:
+            linear-gradient(
+                    135deg,
+                    rgba(156, 104, 125, 0.1),
+                    rgba(158, 105, 226, 0.055)
+            );
+    box-shadow: var(--glass-shadow);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+}
+
+.infoIndex {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.infoIndex > span {
+    color: var(--accent);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    line-height: 1.7;
+}
+
+.infoIndex > strong {
+    color: rgba(156, 104, 125, 0.45);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 45px;
+    font-weight: 400;
+}
+
+.infoContent h2 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(30px, 3.2vw, 43px);
+    font-weight: 400;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+}
+
+.infoContent > p {
+    max-width: 700px;
+    margin: 18px 0 0;
+    color: var(--text-secondary);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.textLink {
+    width: fit-content;
+    margin-top: 25px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--accent-dark);
+    font-size: 11px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: gap 180ms ease, color 180ms ease;
+}
+
+.textLink svg {
+    width: 15px;
+    height: 15px;
+    transition: transform 180ms ease;
+}
+
+.textLink:hover {
+    gap: 14px;
+    color: var(--accent);
+}
+
+.textLink:hover svg {
+    transform: translateX(2px);
+}
+
+/* =========================================================
+   CONTACT CTA
+========================================================= */
+
+.contactSection {
+    margin-top: 65px;
+}
+
+.contactCard {
+    padding: 75px 35px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    background:
+            linear-gradient(
+                    135deg,
+                    rgba(112, 76, 96, 0.84),
+                    rgba(178, 148, 166, 0.75)
+            );
+    box-shadow: 0 30px 70px rgba(70, 48, 61, 0.14);
+}
+
+.contactEyebrow {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+}
+
+.contactCard h2 {
+    margin: 0;
+    color: #fff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(34px, 4vw, 55px);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.035em;
+}
+
+.contactCard > p {
+    max-width: 650px;
+    margin: 22px auto 0;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.contactButton {
+    min-height: 48px;
+    margin-top: 30px;
+    padding: 0 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 13px;
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--accent-dark);
+    font-size: 11px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 180ms ease, background 180ms ease;
+}
+
+.contactButton svg {
+    width: 15px;
+    height: 15px;
+    transition: transform 180ms ease;
+}
+
+.contactButton:hover {
+    transform: translateY(-2px);
+    background: #fff;
+}
+
+.contactButton:hover svg {
+    transform: translateX(3px);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 38px;
+    }
+
+    .heroCard {
+        min-height: 340px;
+    }
+
+    .productsGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .infoCard {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .infoIndex {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+@media (max-width: 700px) {
+    .page {
+        width: min(100% - 28px, 1400px);
+        padding: 25px 0 60px;
+    }
+
+    .hero {
+        min-height: auto;
+        gap: 28px;
+        padding: 30px 0 50px;
+    }
+
+    .hero h1 {
+        font-size: clamp(39px, 11vw, 57px);
+    }
+
+    .hero > div > p {
+        font-size: 13px;
+        line-height: 1.85;
+    }
+
+    .heroCard {
+        min-height: 330px;
+        padding: 25px;
+        border-radius: 23px;
+    }
+
+    .heroCard h2 {
+        font-size: 33px;
+    }
+
+    .heroTags {
+        gap: 7px;
+    }
+
+    .heroTags span {
+        padding: 0 10px;
+        font-size: 9px;
+    }
+
+    .catalogSection {
+        padding-top: 40px;
+    }
+
+    .sectionHeading {
+        margin-bottom: 25px;
+    }
+
+    .sectionHeading h2 {
+        font-size: 36px;
+    }
+
+    .sectionHeading > p {
+        font-size: 12px;
+    }
+
+    .filters {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .filterGroup {
+        width: 100%;
+        gap: 7px;
+    }
+
+    .filterButton {
+        min-height: 38px;
+        padding: 0 12px;
+        font-size: 10px;
+    }
+
+    .productsGrid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .productCard {
+        padding: 13px;
+        border-radius: 22px;
+    }
+
+    .productVisual {
+        min-height: 0;
+        aspect-ratio: 4 / 3;
+        border-radius: 16px;
+    }
+
+    .productVisualButton {
+        border-radius: 16px;
+    }
+
+    .productMonogram span {
+        font-size: 11px;
+    }
+
+    .productMonogram strong {
+        font-size: 27px;
+    }
+
+    .productBody {
+        padding: 19px 5px 5px;
+    }
+
+    .productBody h3 {
+        font-size: 26px;
+    }
+
+    .productBody > p {
+        font-size: 12px;
+    }
+
+    .infoSection {
+        margin-top: 45px;
+    }
+
+    .infoCard {
+        padding: 29px 24px;
+        border-radius: 22px;
+    }
+
+    .infoIndex > strong {
+        font-size: 35px;
+    }
+
+    .infoContent h2 {
+        font-size: 32px;
+    }
+
+    .infoContent > p {
+        font-size: 12px;
+    }
+
+    .contactSection {
+        margin-top: 45px;
+    }
+
+    .contactCard {
+        padding: 50px 22px;
+        border-radius: 24px;
+    }
+
+    .contactCard h2 {
+        font-size: 35px;
+    }
+
+    .contactCard > p {
+        font-size: 12px;
+    }
+
+    .contactButton {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .productCard,
+    .productMonogram,
+    .productButton,
+    .productButton svg,
+    .filterButton,
+    .textLink,
+    .textLink svg,
+    .contactButton,
+    .contactButton svg {
+        transition: none;
+    }
+
+    .productCard:hover,
+    .contactButton:hover {
+        transform: none;
+    }
+}

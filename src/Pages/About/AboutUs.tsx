@@ -1,5 +1,7 @@
 import ScrollReveal from "../../Components/common/ScrollReveal.tsx";
 import styles from "./AboutUs.module.css";
+import aboutImage from "../../assets/about.png";
+import bsProducts from "../../assets/bs-products-2.jpg";
 
 const methodologySteps = [
     {
@@ -44,12 +46,11 @@ export default function AboutUs() {
 
             <ScrollReveal>
                 <section className={styles.heroImageSection}>
-                    <div
-                        className={styles.largeImagePlaceholder}
-                        aria-label="Fotografija Studio Ljepote Alma & Selma"
-                    >
-                        <span>Fotografija</span>
-                    </div>
+                    <img
+                        src={aboutImage}
+                        alt="Studio Ljepote Alma & Selma"
+                        className={styles.largeImage}
+                    />
                 </section>
             </ScrollReveal>
 
@@ -161,11 +162,13 @@ export default function AboutUs() {
                                 </p>
                             </div>
 
-                            <div className={styles.productPlaceholder}>
-                                <span>
-                                    Biologique Recherche
-                                </span>
-                            </div>
+                            <section className={styles.heroImageSection}>
+                                <img
+                                    src={bsProducts}
+                                    alt="Studio Ljepote Alma & Selma"
+                                    className={styles.largeImage}
+                                />
+                            </section>
                         </div>
                     </div>
                 </section>

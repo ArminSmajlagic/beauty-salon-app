@@ -47,14 +47,10 @@ const navigation: NavItem[] = [
             {
                 label: "Svi Proizvodi",
                 href: "#/biologique-recherche/proizvodi",
-            },
-            {
-                label: "Cjenovnik",
-                href: "#/biologique-recherche/cjenovnik",
-            },
+            }
         ],
     },
-    { label: "Web Shop",href: "#/web-shop" },
+    // { label: "Web Shop",href: "#/web-shop" },
     { label: "Kontakt", href: "#/kontakt" },
 ];
 
@@ -73,57 +69,6 @@ function ChevronIcon({ open }: { open: boolean }) {
             aria-hidden="true"
         >
             <path d="m6 9 6 6 6-6" />
-        </svg>
-    );
-}
-
-function SearchIcon() {
-    return (
-        <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.7"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden="true"
-        >
-            <circle cx="11" cy="11" r="7" />
-            <path d="m20 20-4-4" />
-        </svg>
-    );
-}
-
-function CartIcon() {
-    return (
-        <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.7"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden="true"
-        >
-            <path d="M3 4h2l2.2 11h10.9L21 7H6" />
-            <circle cx="9" cy="20" r="1.5" />
-            <circle cx="18" cy="20" r="1.5" />
-        </svg>
-    );
-}
-
-function HeartIcon() {
-    return (
-        <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.7"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden="true"
-        >
-            <path d="M20.8 8.7c0 5.5-8.8 10.3-8.8 10.3S3.2 14.2 3.2 8.7A4.7 4.7 0 0 1 12 6.2a4.7 4.7 0 0 1 8.8 2.5Z" />
         </svg>
     );
 }
@@ -247,8 +192,6 @@ export default function Navbar() {
     const [mobileOpen, setMobileOpen] =
         useState(false);
 
-    const cartItems = 0;
-    const wishlistItems = 0;
 
     return (
         <div className={styles.navbarShell}>
@@ -349,59 +292,59 @@ export default function Navbar() {
                             styles.navbarActions
                         }
                     >
-                        <label
-                            className={
-                                styles.searchBox
-                            }
-                        >
-                            <SearchIcon />
+                        {/*<label*/}
+                        {/*    className={*/}
+                        {/*        styles.searchBox*/}
+                        {/*    }*/}
+                        {/*>*/}
+                        {/*    <SearchIcon />*/}
 
-                            <input
-                                type="search"
-                                placeholder="Pretraga"
-                                aria-label="Pretraga"
-                            />
-                        </label>
+                        {/*    <input*/}
+                        {/*        type="search"*/}
+                        {/*        placeholder="Pretraga"*/}
+                        {/*        aria-label="Pretraga"*/}
+                        {/*    />*/}
+                        {/*</label>*/}
 
-                        <a
-                            className={
-                                styles.iconAction
-                            }
-                            href="/web-shop/korpa"
-                            aria-label={`Korpa, ${cartItems} proizvoda`}
-                        >
-                            <CartIcon />
+                        {/*<a*/}
+                        {/*    className={*/}
+                        {/*        styles.iconAction*/}
+                        {/*    }*/}
+                        {/*    href="/web-shop/korpa"*/}
+                        {/*    aria-label={`Korpa, ${cartItems} proizvoda`}*/}
+                        {/*>*/}
+                        {/*    /!*<CartIcon />*!/*/}
 
-                            {cartItems > 0 && (
-                                <span
-                                    className={
-                                        styles.iconActionBadge
-                                    }
-                                >
-                                    {cartItems}
-                                </span>
-                            )}
-                        </a>
+                        {/*    {cartItems > 0 && (*/}
+                        {/*        <span*/}
+                        {/*            className={*/}
+                        {/*                styles.iconActionBadge*/}
+                        {/*            }*/}
+                        {/*        >*/}
+                        {/*            {cartItems}*/}
+                        {/*        </span>*/}
+                        {/*    )}*/}
+                        {/*</a>*/}
 
-                        <a
-                            className={
-                                styles.iconAction
-                            }
-                            href="/web-shop/omiljeno"
-                            aria-label={`Lista želja, ${wishlistItems} proizvoda`}
-                        >
-                            <HeartIcon />
+                        {/*<a*/}
+                        {/*    className={*/}
+                        {/*        styles.iconAction*/}
+                        {/*    }*/}
+                        {/*    href="/biologique-recherche/proizvodi"*/}
+                        {/*    aria-label={`Lista želja, ${wishlistItems} proizvoda`}*/}
+                        {/*>*/}
+                        {/*    <HeartIcon />*/}
 
-                            {wishlistItems > 0 && (
-                                <span
-                                    className={
-                                        styles.iconActionBadge
-                                    }
-                                >
-                                    {wishlistItems}
-                                </span>
-                            )}
-                        </a>
+                        {/*    {wishlistItems > 0 && (*/}
+                        {/*        <span*/}
+                        {/*            className={*/}
+                        {/*                styles.iconActionBadge*/}
+                        {/*            }*/}
+                        {/*        >*/}
+                        {/*            {wishlistItems}*/}
+                        {/*        </span>*/}
+                        {/*    )}*/}
+                        {/*</a>*/}
                     </div>
                 </div>
             </nav>

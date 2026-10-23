@@ -1,10 +1,16 @@
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import styles from "./Naslovna.module.css";
+import {useNavigate} from "react-router-dom";
 
 import serumVivant from "../../assets/serum-vivant.mp4";
 import bsProducts from "../../assets/bs-products-2.jpg";
+import bodyImage from "../../assets/body.png";
+import faceImage from "../../assets/face.png";
+import permMakeupImage from "../../assets/perm-makeup.png";
+import proMakeupImage from "../../assets/pro-makeup.png";
+import aboutImage from "../../assets/about.png";
 import ScrollReveal from "../../Components/common/ScrollReveal.tsx";
-import {products} from "../../data/data.ts";
+import {products, slugifyProductName} from "../../data/data.ts";
 
 type HeroSlide =
     | {
@@ -31,18 +37,22 @@ const services = [
     {
         title: "Njega lica",
         text: "Personalizirani tretmani njege lica prilagođeni trenutnom stanju i potrebama kože. Stručna procjena i pažljivo odabrani proizvodi pomažu koži vratiti ravnotežu, svježinu i prirodan sjaj.",
+        src: faceImage,
     },
     {
         title: "Njega tijela",
         text: "Tretmani njege tijela usmjereni su na hidrataciju, obnovu i poboljšanje izgleda kože. Svaki tretman prilagođavamo individualnim potrebama i stanju kože.",
+        src: bodyImage,
     },
     {
         title: "Trajni MakeUp",
         text: "Precizni tretmani trajnog make-upa osmišljeni kako bi naglasili prirodne crte lica i pružili dugotrajan, njegovan izgled uz individualno prilagođen pristup.",
+        src: permMakeupImage,
     },
     {
         title: "Pro MakeUp",
         text: "Profesionalno šminkanje za posebne prilike, događaje i trenutke u kojima želite zablistati. Look prilagođavamo vašem stilu, crtama lica i željenom efektu.",
+        src: proMakeupImage,
     },
 ];
 
@@ -68,6 +78,7 @@ export default function Home() {
     const [activeHeroSlide, setActiveHeroSlide] = useState(0);
     const [activeService, setActiveService] = useState(0);
     const [activeProduct, setActiveProduct] = useState(0);
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (heroSlides.length <= 1) {
@@ -115,7 +126,7 @@ export default function Home() {
     };
 
     const visibleProducts = Array.from(
-        { length: Math.min(4, products.length) },
+        {length: Math.min(4, products.length)},
         (_, index) =>
             products[
             (activeProduct + index) % products.length
@@ -155,7 +166,7 @@ export default function Home() {
                                 />
                             )}
 
-                            <div className={styles.heroOverlay} />
+                            <div className={styles.heroOverlay}/>
                         </div>
                     ))}
                 </div>
@@ -260,11 +271,10 @@ export default function Home() {
                                 </a>
                             </div>
 
-                            <div
-                                className={styles.imagePlaceholder}
-                                aria-label="Mjesto za fotografiju"
-                            >
-                                <span>Fotografija</span>
+                            <div className={styles.servicesImage}>
+                                <div className={styles.servicesImageContainer}>
+                                    <img src={aboutImage} alt=""/>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -374,8 +384,12 @@ export default function Home() {
                             </button>
 
                             <div className={styles.serviceCard}>
-                                <div className={styles.serviceImage}>
-                                    <span>Fotografija</span>
+                                <div className={styles.servicesImage}>
+                                    <div className={styles.servicesImageContainer}>
+                                        <img src={services[
+                                            activeService
+                                            ].src} alt=""/>
+                                    </div>
                                 </div>
 
                                 <div className={styles.serviceContent}>
@@ -467,10 +481,6 @@ export default function Home() {
                             </p>
                         </div>
 
-                        <div className={styles.brandPlaceholder}>
-                            <span>Biologique Recherche</span>
-                        </div>
-
                         <div className={styles.productSlider}>
                             <button
                                 type="button"
@@ -482,48 +492,47 @@ export default function Home() {
                             </button>
 
                             <div className={styles.productGrid}>
-                                {visibleProducts.map((product) => (
+                                {visibleProducts.map((product, index) => (
                                     <article
                                         key={`${product.name}-${product.category}`}
                                         className={styles.productCard}
                                     >
-                                        <div
-                                            className={
-                                                styles.productImage
-                                            }
-                                        >
-                                            <span>
-                                                Biologique
-                                                Recherche
-                                            </span>
+                                        <div className={styles.productImage} aria-hidden="true">
+                                            <div className={styles.productVisualGlow}/>
+
+                                            <span className={styles.productVisualDecoration}>
+                    BR
+                </span>
+
+                                            <div className={styles.productMonogram}>
+                                                <strong>BIOLOGIQUE</strong>
+                                                <strong>RECHERCHE</strong>
+                                                <i/>
+                                            </div>
+
+                                            <div className={styles.productVisualFooter}>
+                                                <span>{product.category.toUpperCase()}</span>
+                                                <span>{String(index + 1).padStart(2, "0")}</span>
+                                            </div>
                                         </div>
 
-                                        <div
-                                            className={
-                                                styles.productInfo
-                                            }
-                                        >
-                                            <span
-                                                className={
-                                                    styles.productCategory
-                                                }
-                                            >
-                                                {product.category}
-                                            </span>
+                                        <div className={styles.productInfo}>
+                <span className={styles.productCategory}>
+                    {product.category}
+                </span>
 
                                             <h3>{product.name}</h3>
 
-                                            <strong>
-                                                {product.price}
-                                            </strong>
-
                                             <button
                                                 type="button"
-                                                className={
-                                                    styles.productButton
+                                                className={styles.productButton}
+                                                onClick={() =>
+                                                    navigate(
+                                                        `/biologique-recherche/proizvod/${slugifyProductName(product.name)}`
+                                                    )
                                                 }
                                             >
-                                                Dodaj u korpu
+                                                Detalji proizvoda
                                             </button>
                                         </div>
                                     </article>
@@ -562,7 +571,7 @@ export default function Home() {
 
                         <div className={styles.sectionButton}>
                             <a
-                                href="#/web-shop"
+                                href="#/biologique-recherche/proizvodi"
                                 className={styles.primaryButton}
                             >
                                 Pogledaj više

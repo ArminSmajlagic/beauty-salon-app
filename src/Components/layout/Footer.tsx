@@ -21,15 +21,15 @@ const footerNavigation: FooterCategory[] = [
             }
         ],
     },
-    {
-        label: "Web Shop",
-        items: [
-            {
-                label: "Početna",
-                href: "/beauty-salon-app/web-shop",
-            }
-        ],
-    },
+    // {
+    //     label: "Web Shop",
+    //     items: [
+    //         {
+    //             label: "Početna",
+    //             href: "/beauty-salon-app/web-shop",
+    //         }
+    //     ],
+    // },
     {
         label: "Usluge",
         items: [

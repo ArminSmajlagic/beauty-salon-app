@@ -5,6 +5,28 @@
     padding-top: 50px;
 }
 
+.heroImageSection {
+    display: flex;
+    justify-content: center;
+    padding: 24px 0;
+}
+
+.largeImage {
+    display: block;
+    width: min(95%, 800px);
+    height: 460px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 22px;
+}
+
+@media (max-width: 768px) {
+    .largeImage {
+        width: 92%;
+        height: 260px;
+    }
+}
+
 .sectionInner {
     width: min(100% - 48px, var(--header-max-width));
     margin: 0 auto;
@@ -56,11 +78,6 @@
 
     font-size: 17px;
     line-height: 1.9;
-}
-
-.heroImageSection {
-    width: min(100% - 48px, var(--header-max-width));
-    margin: 0 auto 90px;
 }
 
 .largeImagePlaceholder {
