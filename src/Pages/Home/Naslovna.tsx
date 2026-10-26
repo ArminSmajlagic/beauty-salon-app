@@ -501,23 +501,34 @@ export default function Home() {
                                         key={`${product.name}-${product.category}`}
                                         className={styles.productCard}
                                     >
-                                        <div className={styles.productImage} aria-hidden="true">
-                                            <div className={styles.productVisualGlow}/>
+                                        <div className={styles.productImage}>
+                                            {product.image ? (
+                                                <img
+                                                    src={product.image}
+                                                    alt={product.name}
+                                                    className={styles.productActualImage}
+                                                    loading="lazy"
+                                                />
+                                            ) : (
+                                                <>
+                                                    <div className={styles.productVisualGlow} />
 
-                                            <span className={styles.productVisualDecoration}>
-                    BR
-                </span>
+                                                    <span className={styles.productVisualDecoration}>
+                BR
+            </span>
 
-                                            <div className={styles.productMonogram}>
-                                                <strong>BIOLOGIQUE</strong>
-                                                <strong>RECHERCHE</strong>
-                                                <i/>
-                                            </div>
+                                                    <div className={styles.productMonogram}>
+                                                        <strong>BIOLOGIQUE</strong>
+                                                        <strong>RECHERCHE</strong>
+                                                        <i />
+                                                    </div>
 
-                                            <div className={styles.productVisualFooter}>
-                                                <span>{product.category.toUpperCase()}</span>
-                                                <span>{String(index + 1).padStart(2, "0")}</span>
-                                            </div>
+                                                    <div className={styles.productVisualFooter}>
+                                                        <span>{product.category.toUpperCase()}</span>
+                                                        <span>{String(index + 1).padStart(2, "0")}</span>
+                                                    </div>
+                                                </>
+                                            )}
                                         </div>
 
                                         <div className={styles.productInfo}>

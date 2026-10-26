@@ -165,7 +165,49 @@
 /* =========================================================
    PRODUCT CATALOG
 ========================================================= */
+.productVisual {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    min-height: 220px;
+    overflow: hidden;
+    border-radius: 18px;
+    background: linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.96),
+            rgba(246, 237, 241, 0.92) 55%,
+            rgba(236, 221, 229, 0.88)
+    );
+}
 
+.productPlaceholderContent {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.productActualImage {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    object-fit: contain;
+    object-position: center;
+}
+
+@media (max-width: 600px) {
+    .productVisual {
+        min-height: 180px;
+        border-radius: 15px;
+    }
+
+    .productActualImage {
+        padding: 8px;
+    }
+}
 .catalogSection {
     padding-top: 50px;
 }

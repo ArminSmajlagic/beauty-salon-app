@@ -35,31 +35,46 @@ function ArrowIcon() {
 function ProductPlaceholder({
                                 number,
                                 category,
+                                image,
+                                productName,
                             }: {
     number: string;
     category: string;
+    image?: string;
+    productName: string;
 }) {
     return (
-        <div
-            className={styles.productVisual}
-            aria-hidden="true"
-        >
-            <div className={styles.productVisualGlow} />
+        <div className={styles.productVisual}>
+            {image ? (
+                <img
+                    src={image}
+                    alt={productName}
+                    className={styles.productActualImage}
+                    loading="lazy"
+                />
+            ) : (
+                <div
+                    className={styles.productPlaceholderContent}
+                    aria-hidden="true"
+                >
+                    <div className={styles.productVisualGlow} />
 
-            <span className={styles.productVisualDecoration}>
-                BR
-            </span>
+                    <span className={styles.productVisualDecoration}>
+                        BR
+                    </span>
 
-            <div className={styles.productMonogram}>
-                <span>BIOLOGIQUE</span>
-                <strong>RECHERCHE</strong>
-                <i />
-            </div>
+                    <div className={styles.productMonogram}>
+                        <span>BIOLOGIQUE</span>
+                        <strong>RECHERCHE</strong>
+                        <i />
+                    </div>
 
-            <div className={styles.productVisualFooter}>
-                <span>{category.toUpperCase()}</span>
-                <span>{number}</span>
-            </div>
+                    <div className={styles.productVisualFooter}>
+                        <span>{category.toUpperCase()}</span>
+                        <span>{number}</span>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
@@ -241,6 +256,8 @@ export default function Products() {
                                             <ProductPlaceholder
                                                 number={productNumber}
                                                 category={product.category}
+                                                image={product.image}
+                                                productName={product.name}
                                             />
                                         </button>
 
