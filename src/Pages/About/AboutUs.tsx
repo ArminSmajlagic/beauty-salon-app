@@ -272,11 +272,11 @@ export default function AboutUs() {
 
                         <div className={styles.contactDetails}>
                             <a
-                                href="https://www.google.com/maps/search/?api=1&query=Bataljon%20BB%2C%2074400%20Derventa%2C%20Bosnia%20and%20Herzegovina"
+                                href="https://www.google.com/maps/search/?api=1&query=Derventski%20Oslobodilaca%206%2C%2074400%20Derventa%2C%20Bosnia%20and%20Herzegovina"
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                Bataljon BB
+                                Derventski Oslobodilaca 6
                                 <br />
                                 74400 Derventa
                             </a>
@@ -285,14 +285,14 @@ export default function AboutUs() {
                                 +387 (0) 65-863-593
                             </a>
 
-                            <a href="mailto:info@studioljepote.com">
-                                info@studioljepote.com
+                            <a href="mailto:selmap83.sp@gmail.com">
+                                selmap83.sp@gmail.com
                             </a>
                         </div>
 
                         <div className={styles.contactActions}>
                             <a
-                                href="mailto:info@studioljepote.com"
+                                href="mailto:selmap83.sp@gmail.com"
                                 className={styles.primaryButton}
                             >
                                 Pošaljite e-mail

@@ -136,7 +136,7 @@ export default function Contact() {
         ].join("\n");
 
         const mailtoUrl =
-            `mailto:info@studioljepote.com` +
+            `mailto:selmap83.sp@gmail.com` +
             `?subject=${encodeURIComponent(subject)}` +
             `&body=${encodeURIComponent(emailBody)}`;
 
@@ -284,7 +284,7 @@ export default function Contact() {
                             </a>
 
                             <a
-                                href="https://instagram.com/"
+                                href="https://www.instagram.com/studio_allma_sellma/"
                                 target="_blank"
                                 rel="noreferrer"
                                 className={styles.contactLink}
@@ -302,7 +302,7 @@ export default function Contact() {
                             </a>
 
                             <a
-                                href="mailto:info@studioljepote.com"
+                                href="mailto:selmap83.sp@gmail.com"
                                 className={styles.contactLink}
                             >
                                 <span className={styles.icon}>
@@ -312,7 +312,7 @@ export default function Contact() {
                                 <span>
                                     <small>E-mail</small>
                                     <strong>
-                                        info@studioljepote.com
+                                         selmap83.sp@gmail.com
                                     </strong>
                                 </span>
                             </a>
@@ -343,11 +343,11 @@ export default function Contact() {
                                 <small>Adresa</small>
 
                                 <a
-                                    href="https://www.google.com/maps/search/?api=1&query=Bataljon%20BB%2C%2074400%20Derventa%2C%20Bosnia%20and%20Herzegovina"
+                                    href="https://www.google.com/maps/search/?api=1&query=Derventski%20Oslobodilaca%206%2C%2074400%20Derventa%2C%20Bosnia%20and%20Herzegovina"
                                     target="_blank"
                                     rel="noreferrer"
                                 >
-                                    Bataljon BB
+                                    Derventski Oslobodilaca 6
                                     <br />
                                     <strong>
                                         74400 Derventa

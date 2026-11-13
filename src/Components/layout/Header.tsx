@@ -100,11 +100,11 @@ export default function Header() {
                     <div className={styles.topBarLeft}>
                         <a
                             className={styles.contactLink}
-                            href="mailto:info@studioljepote.com"
+                            href="mailto:selmap83.sp@gmail.com"
                         >
                             <MailIcon />
                             <span>
-                                info@studioljepote.com
+                                selmap83.sp@gmail.com
                             </span>
                         </a>
 
@@ -122,7 +122,7 @@ export default function Header() {
                     <div className={styles.topBarRight}>
                         <a
                             className={styles.socialLink}
-                            href="https://instagram.com/"
+                            href="https://www.instagram.com/studio_allma_sellma/"
                             target="_blank"
                             rel="noreferrer"
                             aria-label="Instagram"
@@ -133,7 +133,7 @@ export default function Header() {
 
                         <a
                             className={styles.socialLink}
-                            href="https://facebook.com/"
+                            href="https://www.facebook.com/Studio.Allma.Sellma"
                             target="_blank"
                             rel="noreferrer"
                             aria-label="Facebook"

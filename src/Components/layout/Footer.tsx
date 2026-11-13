@@ -204,7 +204,7 @@ export default function Footer() {
 
                     <div className={styles.socialLinks}>
                         <a
-                            href="https://facebook.com/"
+                            href="https://www.facebook.com/Studio.Allma.Sellma"
                             target="_blank"
                             rel="noreferrer"
                             className={styles.socialLink}
@@ -214,7 +214,7 @@ export default function Footer() {
                         </a>
 
                         <a
-                            href="https://instagram.com/"
+                            href="https://www.instagram.com/studio_allma_sellma/"
                             target="_blank"
                             rel="noreferrer"
                             className={styles.socialLink}
@@ -278,7 +278,7 @@ export default function Footer() {
 
                     <div className={styles.contactList}>
                         <a
-                            href="https://www.google.com/maps/search/?api=1&query=Bataljon%20BB%2C%2074400%20Derventa%2C%20Bosnia%20and%20Herzegovina"
+                            href="https://www.google.com/maps/search/?api=1&query=Derventski%20Oslobodilaca%206%2C%2074400%20Derventa%2C%20Bosnia%20and%20Herzegovina"
                             target="_blank"
                             rel="noreferrer"
                             className={styles.contactItem}
@@ -306,7 +306,7 @@ export default function Footer() {
                             </span>
 
                             <span>
-                                Bataljon BB
+                                Derventski Oslobodilaca 6
                                 <br />
                                 <strong>74400 Derventa</strong>
                             </span>
@@ -326,7 +326,7 @@ export default function Footer() {
                         </a>
 
                         <a
-                            href="mailto:info@studioljepote.com"
+                            href="mailto:selmap83.sp@gmail.com"
                             className={styles.contactItem}
                         >
                             <span className={styles.contactIcon}>
@@ -334,7 +334,7 @@ export default function Footer() {
                             </span>
 
                             <span>
-                                info@studioljepote.com
+                                selmap83.sp@gmail.com
                             </span>
                         </a>
                     </div>

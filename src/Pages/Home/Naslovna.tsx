@@ -621,7 +621,7 @@ export default function Home() {
                         <div className={styles.bookingActions}>
                             <a
                                 className={styles.primaryButton}
-                                href="mailto:info@studioljepote.com"
+                                href="mailto:selmap83.sp@gmail.com"
                             >
                                 Pošaljite e-mail
                             </a>
